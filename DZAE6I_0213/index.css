@@ -8,7 +8,7 @@ body {
     text-align: left;
     min-height: 100%;
     margin: auto;
-    font-size: 28px;
+    font-size: 18px;
     font-family: sans-serif, Arial, Helvetica;
 }
 
@@ -21,7 +21,7 @@ footer {
 }
 
 #the_header_logo {
-    width: 10%;
+    height: 80px;
     float: right;
 }
 
@@ -32,3 +32,17 @@ footer {
     text-align: right;
 }
 
+iframe {
+    width: 95%;
+    height: 100%;
+    min-height: 500px;
+    border: 1px dashed #aaa;
+}
+
+#sub img {
+    width: 100%;
+    float: right;
+}
+td {
+    vertical-align: top;
+}
