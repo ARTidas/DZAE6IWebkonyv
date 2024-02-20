@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DZAE6IKonyv>
-    <book>
+    <book id="9780132350884">
         <title>Clean Code: A Handbook of Agile Software Craftsmanship</title>
-        <ISBN></ISBN>
+        <ISBN>9780132350884</ISBN>
         <publish_date>2007-01-01</publish_date>
         <publisher>Robert C. Martin Series</publisher>
         <author>Robert C. Martin</author>
         <abstract>Programming, Computer Science, Technology, Software, Technical, Nonfiction</abstract>
         <source>https://www.goodreads.com/book/show/3735293-clean-code</source>
     </book>
-    <book>
+    <book id="9780201616224">
         <title>The Pragmatic Programmer: From Journeyman to Master</title>
         <ISBN>9780201616224</ISBN>
         <publish_date>1999-10-20</publish_date>
@@ -18,9 +18,9 @@
         <abstract>Programming, Computer Science, Technology, Nonfiction, Software</abstract>
         <source>https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer</source>
     </book>
-    <book>
+    <book id="9781400096237">
         <title>The Information: A History, a Theory, a Flood</title>
-        <ISBN>1400096235, 9781400096237</ISBN>
+        <ISBN>9781400096237</ISBN>
         <publish_date>2011-03-01</publish_date>
         <publisher>Knopf Doubleday Publishing Group, 2012</publisher>
         <author>James Gleick</author>
