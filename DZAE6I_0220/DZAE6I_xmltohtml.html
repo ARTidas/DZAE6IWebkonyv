@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <title>Exercise</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="description" content="Exercise" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #444;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #cc0;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const events = document.getElementsByClassName("datetime");
+            for (let k in events) {
+                //console.log(events[k].innerHTML);
+                events[k].innerHTML = formatDate(events[k].innerHTML);
+            }
+        });
+
+        function formatDate(dateString) {
+            const year = dateString.substring(0, 4);
+            const month = dateString.substring(4, 6);
+            const day = dateString.substring(6, 8);
+            const hours = dateString.substring(9, 11);
+            const minutes = dateString.substring(11, 13);
+            return year + "-" + month + "-" + day + " " + hours + ":" + minutes;
+        }
+    </script>
+
+    <h1>Event Schedule</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Start</th>
+                <th>End</th>
+                <th>Location</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="datetime">20240220T111500Z</td>
+                <td class="datetime">20240220T124500Z</td>
+                <td>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</td>
+                <td>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</td>
+            </tr>
+            <tr>
+                <td class="datetime">20240227T111500Z</td>
+                <td class="datetime">20240227T124500Z</td>
+                <td>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</td>
+                <td>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</td>
+            </tr>
+            <tr>
+                <td class="datetime">20240305T111500Z</td>
+                <td class="datetime">20240305T124500Z</td>
+                <td>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</td>
+                <td>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</td>
+            </tr>
+            <tr>
+                <td class="datetime">20240312T111500Z</td>
+                <td class="datetime">20240312T124500Z</td>
+                <td>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</td>
+                <td>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</td>
+            </tr>
+            <tr>
+                <td class="datetime">20240319T111500Z</td>
+                <td class="datetime">20240319T124500Z</td>
+                <td>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</td>
+                <td>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</td>
+            </tr>
+            <tr>
+                <td class="datetime">20240220T150000Z</td>
+                <td class="datetime">20240220T163000Z</td>
+                <td>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</td>
+                <td>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</td>
+            </tr>
+            <tr>
+                <td class="datetime">20240227T111500Z</td>
+                <td class="datetime">20240227T124500Z</td>
+                <td>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</td>
+                <td>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</td>
+            </tr>
+            <tr>
+                <td class="datetime">20240305T111500Z</td>
+                <td class="datetime">20240305T124500Z</td>
+                <td>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</td>
+                <td>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

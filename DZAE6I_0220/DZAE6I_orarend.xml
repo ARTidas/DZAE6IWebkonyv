@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VZ_orarend>
+    <event>
+        <start>20240220T111500Z</start>
+        <end>20240220T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cb9-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240227T111500Z</start>
+        <end>20240227T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cba-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240305T111500Z</start>
+        <end>20240305T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cbb-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240312T111500Z</start>
+        <end>20240312T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cbc-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240319T111500Z</start>
+        <end>20240319T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cbd-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240220T150000Z</start>
+        <end>20240220T163000Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3d1f-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240227T111500Z</start>
+        <end>20240227T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cba-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240305T111500Z</start>
+        <end>20240305T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cbb-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240312T111500Z</start>
+        <end>20240312T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cbc-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240319T111500Z</start>
+        <end>20240319T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cbd-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240220T150000Z</start>
+        <end>20240220T163000Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3d1f-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240227T111500Z</start>
+        <end>20240227T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cba-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+    <event>
+        <start>20240305T111500Z</start>
+        <end>20240305T124500Z</end>
+        <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
+        <transp>OPAQUE</transp>
+        <sequence>0</sequence>
+        <uid>SDA275e3cbb-0000-0000-0000-000000000000</uid>
+        <description></description>
+        <summary>Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend</summary>
+        <priority>5</priority>
+        <class>PUBLIC</class>
+        <alarm>
+            <trigger>-PT15M</trigger>
+            <action>DISPLAY</action>
+            <description>Reminder</description>
+            <priority>5</priority>
+        </alarm>
+    </event>
+</VZ_orarend>
