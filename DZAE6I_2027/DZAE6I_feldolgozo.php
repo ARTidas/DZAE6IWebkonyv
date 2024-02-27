@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <section class="container">
         <h1>Results - DZAE6I</h1>
         <p>
             <a href="DZAE6I_urlap.html">Back</a>
@@ -60,7 +60,7 @@
         <footer>
             <p>Zoltan Veres - DZAE6I</p>
         </footer>
-    </div>
+    </section>
 
 </body>
 </html>

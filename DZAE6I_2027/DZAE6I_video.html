@@ -11,22 +11,7 @@
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 10px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css" type="text/css" />
 </head>
 <body>
 
@@ -37,32 +22,32 @@
         Your browser does not support the video tag.
     </video>
 
-    <div>
+    <section>
         <p>Playback control</p>
         <button onclick="play()">Play</button>
         <button onclick="pause()">Pause</button>
         <button onclick="playPause()">Play/Pause</button>
-    </div>
-    <div>
+    </section>
+    <section>
         <p>Playback speed control</p>
         <button onclick="setSpeed('0.5')">Very Slow</button>
         <button onclick="setSpeed('0.75')">Slow</button>
         <button onclick="setSpeed('1.0')">Normal</button>
         <button onclick="setSpeed('1.5')">Fast</button>
         <button onclick="setSpeed('2.0')">Very Fast</button>
-    </div>
-    <div>
+    </section>
+    <section>
         <p>Sound control</p>
         <button onclick="toggleMute()">Mute/Unmute</button>
         <button onclick="setVolume(0)">Silent</button>
         <button onclick="setVolume(1)">Loud</button>
-    </div>
-    <div>
+    </section>
+    <section>
         <p>Data control</p>
         <button onclick="showVideoLength()">Length of Video</button>
         <button onclick="showCurrentTime()">Current Position</button>
         <button onclick="showVideoEnded()">Is Video Ended?</button>
-    </div>
+    </section>
     <br/>
 
     <script>
