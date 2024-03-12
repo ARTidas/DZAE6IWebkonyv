@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VZ_orarend>
-    <event id="1" type="seminar" visibility="public">
+    <event>
         <start>20240220T111500Z</start>
         <end>20240220T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -18,7 +18,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="2" type="seminar" visibility="public">
+    <event>
         <start>20240227T111500Z</start>
         <end>20240227T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -36,7 +36,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="3" type="seminar" visibility="public">
+    <event>
         <start>20240305T111500Z</start>
         <end>20240305T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -54,7 +54,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="4" type="seminar" visibility="public">
+    <event>
         <start>20240312T111500Z</start>
         <end>20240312T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -72,7 +72,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="5" type="seminar" visibility="public">
+    <event>
         <start>20240319T111500Z</start>
         <end>20240319T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -90,7 +90,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="6" type="seminar" visibility="public">
+    <event>
         <start>20240220T150000Z</start>
         <end>20240220T163000Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -108,7 +108,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="7" type="seminar" visibility="public">
+    <event>
         <start>20240227T111500Z</start>
         <end>20240227T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -126,7 +126,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="8" type="seminar" visibility="public">
+    <event>
         <start>20240305T111500Z</start>
         <end>20240305T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -144,7 +144,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="9" type="seminar" visibility="public">
+    <event>
         <start>20240312T111500Z</start>
         <end>20240312T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -162,7 +162,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="10" type="seminar" visibility="public">
+    <event>
         <start>20240319T111500Z</start>
         <end>20240319T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -180,7 +180,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="11" type="seminar" visibility="public">
+    <event>
         <start>20240220T150000Z</start>
         <end>20240220T163000Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -198,7 +198,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="12" type="seminar" visibility="public">
+    <event>
         <start>20240227T111500Z</start>
         <end>20240227T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
@@ -216,7 +216,7 @@
             <priority>5</priority>
         </alarm>
     </event>
-    <event id="13" type="seminar" visibility="public">
+    <event>
         <start>20240305T111500Z</start>
         <end>20240305T124500Z</end>
         <location>Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)</location>
