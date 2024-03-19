@@ -9,6 +9,7 @@ body {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 10px 10px #aaa;
+    width: 25%;
 }
 
 input, select {

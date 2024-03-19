@@ -35,7 +35,7 @@
                 $confidence = $_POST['confidence'];
 
                 if (empty($name)) {
-                    echo "<span class=\"warning\">Name cannot be empty!</span><br>";
+                    echo "<span class=\"warning\">Name is empty!</span><br>";
                 }
                 else {
                     if (strlen($name) > 50) {
@@ -43,7 +43,7 @@
                     }
                 }
                 if (empty($pin)) {
-                    echo "<span class=\"warning\">Pin cannot be empty!</span><br>";
+                    echo "<span class=\"warning\">Pin is empty!</span><br>";
                 }
                 else {
                     if (strlen($pin) > 50) {
@@ -51,17 +51,19 @@
                     }
                 }
                 if (empty($fruit)) {
-                    echo "<span class=\"warning\">Fruit cannot be empty!</span><br>";
+                    echo "<span class=\"warning\">Fruit is empty!</span><br>";
                 }
                 if (empty($age)) {
-                    echo "<span class=\"warning\">Age cannot be empty!</span><br>";
+                    echo "<span class=\"warning\">Age is empty!</span><br>";
                 }
                 if (empty($shoeSize)) {
-                    echo "<span class=\"warning\">Shoe size cannot be empty!</span><br>";
+                    echo "<span class=\"warning\">Shoe size is empty!</span><br>";
                 }
                 if (empty($confidence)) {
-                    echo "<span class=\"warning\">Confidence cannot be empty!</span><br>";
+                    echo "<span class=\"warning\">Confidence is empty!</span><br>";
                 }
+
+                echo("<br/>");
 
                 echo "Name: $name<br>";
                 echo "Favorite Fruit: $fruit<br>";
