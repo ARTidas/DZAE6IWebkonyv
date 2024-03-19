@@ -74,8 +74,15 @@
         ?>
     </section>
 
+    <br/>
+    <hr/>
+
     <footer>
         <p>Zoltan Veres - DZAE6I</p>
+        
+        <p>W3Schools HTML5: <a target="_blank" href="https://www.w3schools.com/html/">https://www.w3schools.com/html/</a></p>
+        <p>W3Schools Form: <a target="_blank" href="https://www.w3schools.com/html/html_forms.asp">https://www.w3schools.com/html/html_forms.asp</a></p>
+        <p>HTML5: <a target="_blank" href="https://html5.org/">https://html5.org/</a></p>
     </footer>
 
 </body>
