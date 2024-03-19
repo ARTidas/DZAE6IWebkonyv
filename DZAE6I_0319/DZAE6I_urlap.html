@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <title>Exercise</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="description" content="Exercise" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css" type="text/css" />
+</head>
+<body>
+
+    <header>
+        <h1>HTML Form - DZAE6I</h1>
+    </header>
+
+    <section class="container">
+        <form action="DZAE6I_feldolgozo.php" method="post">
+            <span>Name:</span>
+            <input type="text" name="name" autofocus required pattern="[A-Za-z]{3,}"><br>
+
+            <span>Pin:</span>
+            <input type="password" name="pin" required pattern="[0-9]{4}"><br>
+
+            <span>Favorite Fruit:</span>
+            <input type="text" name="fruit" list="fruit"><br>
+
+            <datalist id="fruit">
+                <option value="Apple">
+                <option value="Banana">
+                <option value="Orange">
+                <option value="Grape">
+                <option value="Pear">
+            </datalist>
+
+            <span>Age:</span>
+            <input type="number" name="age" min="1" max="120" value="30"><br>
+
+            <span>Shoe Size:</span>
+            <input type="number" name="shoeSize" step="0.5" min="0.5" max="90" value="42.5"><br>
+
+            <span>Confidence:</span>
+            <input type="range" name="confidence" min="0" max="100"><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>Zoltan Veres - DZAE6I</p>
+        
+        <p>W3Schools HTML5: <a href="https://www.w3schools.com/html/">https://www.w3schools.com/html/</a></p>
+        <p>W3Schools Form: <a href="https://www.w3schools.com/html/html_forms.asp">https://www.w3schools.com/html/html_forms.asp</a></p>
+        <p>HTML5: <a href="https://html5.org/">https://html5.org/</a></p>
+    </footer>
+
+</body>
+</html>
