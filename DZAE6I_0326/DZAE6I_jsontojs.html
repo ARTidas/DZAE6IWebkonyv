@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <title>Exercise</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="description" content="Exercise" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="index.css" type="text/css" /> -->
+</head>
+<body>
+
+    <header>
+        <h1>JSON - DZAE6I</h1>
+    </header>
+
+    <section id="container"></section>
+    <br/>
+
+    <br/>
+    <hr/>
+
+    <footer>
+        <p>Zoltan Veres - DZAE6I</p>
+        
+        <p>Source: <a target="_blank" href="https://github.com/BLaszlo2020">https://github.com/BLaszlo2020</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const book_data = {
+                "books": {
+                    "book": [
+                        {
+                            "ISBN": "9789630640923",
+                            "title": "Java 2 I-II. - Útikalauz programozóknak 5.0",
+                            "author": "Nyékyné Dr. Gaizler Judit",
+                            "description": "A könyv elsősorban a számítástechnika és informatika területén dolgozó szakemberek, valamint a felsőfokú tanulmányaik keretében ezekkel a témakörökkel foglalkozó egyetemi",
+                            "genre": "IT",
+                            "publication_year": "2009",
+                            "publisher": "ELTE TTK Hallgatói Alapítvány, 2009"
+                        },
+                        {
+                            "ISBN": "9786155012174",
+                            "title": "C# programozás lépésről lépésre",
+                            "author": "Reiter István",
+                            "description": "A .NET platform ún. felügyelt (vagy managed) kódot használ, vagyis a program teljes mértékben natív",
+                            "genre": "IT",
+                            "publication_year": "2018",
+                            "publisher": "Jedlik Oktatási Stúdió Kft."
+                        }
+                    ]
+                }
+            }
+
+            function displayBookJSON() {
+                const section = document.getElementById("container");
+                
+                //section.textContent = JSON.stringify(book_data);
+                //section.textContent += JSON.stringify(book_data.books.book);
+                book_data.books.book.forEach(book => {
+                    const book_div = document.createElement("div");
+                    book_div.innerHTML = `
+                        <p><strong>Title:</strong> ${book.title}</p>
+                        <p><strong>Author:</strong> ${book.author}</p>
+                        <p><strong>Description:</strong> ${book.description}</p>
+                        <p><strong>Genre:</strong> ${book.genre}</p>
+                        <p><strong>Publication Year:</strong> ${book.publication_year}</p>
+                        <p><strong>Publisher:</strong> ${book.publisher}</p>
+                        <hr>
+                    `;
+
+                    section.appendChild(book_div);
+                });
+            }
+
+            displayBookJSON();
+        });
+    </script>
+
+</body>
+</html>

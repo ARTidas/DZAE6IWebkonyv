@@ -1,0 +1,20 @@
+<books>
+    <book>
+        <ISBN>9789630640923</ISBN>
+        <title>Java 2 I-II. - Útikalauz programozóknak 5.0</title>
+        <author>Nyékyné Dr. Gaizler Judit</author>
+        <description>A könyv elsősorban a számítástechnika és informatika területén dolgozó szakemberek, valamint a felsőfokú tanulmányaik keretében ezekkel a témakörökkel foglalkozó egyetemi</description>
+        <genre>IT</genre>
+        <publication_year>2009</publication_year>
+        <publisher>ELTE TTK Hallgatói Alapítvány, 2009</publisher>
+    </book>
+    <book>
+        <ISBN>9786155012174</ISBN>
+        <title>C# programozás lépésről lépésre</title>
+        <author>Reiter István</author>
+        <description>A .NET platform ún. felügyelt (vagy managed) kódot használ, vagyis a program teljes mértékben natív</description>
+        <genre>IT</genre>
+        <publication_year>2018</publication_year>
+        <publisher>Jedlik Oktatási Stúdió Kft.</publisher>
+    </book>
+</books>
