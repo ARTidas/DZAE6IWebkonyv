@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <title>Exercise</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="description" content="Exercise" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="index.css" type="text/css" /> -->
+</head>
+<body>
+
+    <header>
+        <h1>JSON conversion to function</h1>
+    </header>
+
+    <section id="container">
+        <table border="1">
+            <tbody>
+                <tr id="records_container"></tr>
+            </tbody>
+        </table>
+    </section>
+    <br/>
+
+    <br/>
+    <hr/>
+
+    <footer>
+        <p>Zoltan Veres - DZAE6I</p>
+        
+        <p>Source: <a target="_blank" href="https://github.com/BLaszlo2020">https://github.com/BLaszlo2020</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dzae6i = {
+                "records": [
+                    {
+                        "name": "Java XML and JSON",
+                        "price": 0,
+                        "birth": function () {
+                            return "2024-03-26";
+                        }
+                    },
+                    {
+                        "name": "JavaScript to SJON",
+                        "price": 20,
+                        "birth": function () {
+                            return "2024-03-27";
+                        }
+                    },
+                    {
+                        "name": "Scala for the Impatient",
+                        "price": 1000,
+                        "birth": function () {
+                            return "2024-03-28";
+                        }
+                    },
+                    {
+                        "name": "Scala in Depth",
+                        "price": 1300,
+                        "birth": function () {
+                            return "2024-03-29";
+                        }
+                    }
+                ]
+            }
+
+            function displayTableFromJSON() {
+                const records_container = document.getElementById("records_container");
+                
+                dzae6i.records.forEach(record => {
+                    const record_container = document.createElement("td");
+                    record_container.innerHTML = `
+                        <table border="1">
+                            <tbody>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>${record.name}</td>
+                                </tr>
+                                <tr>
+                                    <th>Price</th>
+                                    <td>${record.price}</td>
+                                </tr>
+                                <tr>
+                                    <th>Birth</th>
+                                    <td>${record.birth()}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    `;
+
+                    records_container.appendChild(record_container);
+                });
+            }
+
+            displayTableFromJSON();
+        });
+    </script>
+
+</body>
+</html>

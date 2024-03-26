@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <title>Exercise</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="description" content="Exercise" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="index.css" type="text/css" /> -->
+</head>
+<body>
+
+    <header>
+        <h1>JSON text to JSON object - DZAE6I</h1>
+    </header>
+
+    <section id="container">
+        <textarea id="json_input" rows="7" cols="50">
+{
+    "name": "Zoltan Veres",
+    "zip_code": 3980,
+    "city": "Sarospatak",
+    "university": "University of Tokaj"
+}
+        </textarea><br>
+        <button onclick="displayObject()">Display Object</button>
+        <br>
+        <pre id="output"></pre>
+    </section>
+    <br/>
+
+    <br/>
+    <hr/>
+
+    <footer>
+        <p>Zoltan Veres - DZAE6I</p>
+        
+        <p>Source: <a target="_blank" href="https://github.com/BLaszlo2020">https://github.com/BLaszlo2020</a></p>
+    </footer>
+
+    <script>
+        function displayObject() {
+            const json_input = document.getElementById('json_input').value;
+            const json_object = JSON.parse(json_input);
+            
+            //document.getElementById('output').innerText = JSON.stringify(json_object);
+            document.getElementById('output').innerText = JSON.stringify(json_object, null, "\t");
+        }
+    </script>
+
+</body>
+</html>
