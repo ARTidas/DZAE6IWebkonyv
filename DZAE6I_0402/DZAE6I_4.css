@@ -54,3 +54,7 @@ span.warning {
     background-color: #f00;
     color: #ff0;
 }
+
+button {
+    font-weight: bold;
+}

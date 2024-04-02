@@ -1,34 +1,57 @@
 $(document).ready(function() {
     console.log("Starting up engines...");
 
-    $('.container input').css('background-color', '#fff');
-    $('.container input').css('border', '1px solid #fff');
-
-    $('.container h1').hover(function () {
-        console.log('Mosue over header...');
-        alert('Mouse over header...');
+    $('#button_hide').click(function() {
+        console.log('Hiding...');
+        $('#container').children('p').each(function() {
+            $(this).hide();
+        });
     });
 
-    $('.container p:first strong').click(function () {
-        $('.container p:first').hide();
+    $('#button_show').click(function() {
+        console.log('Showing...');
+        $('#container').children('p').each(function() {
+            $(this).show();
+        });
     });
 
-    $('.container p').eq(1).children('strong').dblclick(function() {
-        $('.container p').eq(1).hide();
+    $('#button_toggle').click(function() {
+        console.log('Toggling...');
+        $('#container').children('p').each(function() {
+            $(this).toggle();
+        });
     });
 
-    $('.container button').hover(function () {
-        console.log('Mouse over button...');
-        alert('Mouse over header...');
+
+    $('#button_hide_form').click(function() {
+        console.log('Hiding form...');
+        $('#container').hide();
     });
 
-    $('.container input').hover(function () {
-        $(this).css('border', '1px solid #f00');
+    $('#button_show_form').click(function() {
+        console.log('Showing form...');
+        $('#container').show();
     });
 
-    $('.container input').click(function () {
-        $(this).css('background-color', '#0f0');
+    $('#button_toggle_form').click(function() {
+        console.log('Toggling form...');
+        $('#container').toggle();
     });
 
+
+    $('#button_opacity_10').click(function() {
+        console.log('Fading...');
+        $('#container').fadeTo('slow', 0.1);
+    });
+
+    $('#button_opacity_50').click(function() {
+        console.log('Fading...');
+        $('#container').fadeTo('slow', 0.5);
+    });
+
+    $('#button_opacity_80').click(function() {
+        console.log('Fading...');
+        $('#container').fadeTo('slow', 0.8);
+    });
     
 });
