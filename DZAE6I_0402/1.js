@@ -5,8 +5,8 @@ $(document).ready(function() {
     VZObj = JSON.parse(VZObj);
     console.log(VZObj);
     console.log(VZObj.cars);
-    console.log(VZObj.cars[1]);
+    console.log(VZObj.cars[2]);
 
-    $('#container').html(VZObj.cars[1]);
+    $('#container').html(VZObj.cars[2]);
 
 });
