@@ -3,10 +3,10 @@ body {
     background-color: #fff;
     margin: 0;
     padding: 20px;
+    text-align: left;
 }
 #container {
     max-width: 600px;
-    margin: 50px auto;
     background-color: #a0cfee;
     padding: 20px;
     border-radius: 8px;

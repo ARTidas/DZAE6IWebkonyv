@@ -3,21 +3,21 @@ $(document).ready(function() {
 
     $('#button_hide').click(function() {
         console.log('Hiding...');
-        $('#container').children('p').each(function() {
+        $('body').children('p').each(function() {
             $(this).hide();
         });
     });
 
     $('#button_show').click(function() {
         console.log('Showing...');
-        $('#container').children('p').each(function() {
+        $('body').children('p').each(function() {
             $(this).show();
         });
     });
 
     $('#button_toggle').click(function() {
         console.log('Toggling...');
-        $('#container').children('p').each(function() {
+        $('body').children('p').each(function() {
             $(this).toggle();
         });
     });
