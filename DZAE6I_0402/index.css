@@ -1,0 +1,48 @@
+/* Resetting default margins and paddings */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd, dt, blockquote, figure, fieldset, input, textarea, pre, iframe, hr, address {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting box-sizing to border-box for all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Setting basic styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styles for headings */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Styles for footer */
+footer p {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}

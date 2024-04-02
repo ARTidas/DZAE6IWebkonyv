@@ -50,7 +50,8 @@
             const json_object = JSON.parse(json_input);
             
             //document.getElementById('output').innerText = JSON.stringify(json_object);
-            document.getElementById('output').innerText = JSON.stringify(json_object, null, "\t");
+            //document.getElementById('output').innerText = JSON.stringify(json_object, null, "\t");
+            document.getElementById('output').innerText = JSON.stringify(json_object.name, null, "\t");
         }
     </script>
 
