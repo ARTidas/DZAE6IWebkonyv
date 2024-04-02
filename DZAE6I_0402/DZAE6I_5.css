@@ -8,8 +8,10 @@ button {
 
 #box {
     background-color: #88c08b;
-    width: 25%;
     height: 10%;
     padding: 20px;
     position: absolute;
+
+    width: 300px;
+    left: 300px;
 }
