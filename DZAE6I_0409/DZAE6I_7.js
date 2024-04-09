@@ -23,7 +23,7 @@ $(document).ready(function() {
             .catch(error => console.error("Error fetching JSON data:", error))
         ;*/
 
-        $.ajax({
+        /*$.ajax({
             url: 'VZ_timetable.json',
             dataType: 'json',
             success: function(record) {
@@ -41,7 +41,21 @@ $(document).ready(function() {
             error: function(jqXHR, textStatus, errorThrown) {
                 console.error("Error fetching JSON data:", errorThrown);
             }
+        });*/
+
+        $.getJSON('VZ_timetable.json', function(data) {
+            $.each( data, function( key, record ) {
+                $('#timetable').html(`
+                    <span><strong>ID:</strong></span> #${record.event[0].id}<br/><br/>
+                    <span><strong>Type:</strong></span> ${record.event[0].type}<br/><br/>
+                    <span><strong>Start:</strong></span> ${record.event[0].start}<br/><br/>
+                    <span><strong>End:</strong></span> ${record.event[0].end}<br/><br/>
+                    <span><strong>Location:</strong></span> ${record.event[0].location}<br/><br/>
+                    <span><strong>Description:</strong></span> ${record.event[0].description}<br/><br/>
+                `);
+            });
         });
+
     });
     
 });
