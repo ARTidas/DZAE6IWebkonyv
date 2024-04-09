@@ -45,13 +45,13 @@ $(document).ready(function() {
 
         $.getJSON('VZ_timetable.json', function(data) {
             $.each( data, function( key, record ) {
+                console.log(record);
                 $('#timetable').html(`
-                    <span><strong>ID:</strong></span> #${record.event[0].id}<br/><br/>
                     <span><strong>Type:</strong></span> ${record.event[0].type}<br/><br/>
                     <span><strong>Start:</strong></span> ${record.event[0].start}<br/><br/>
                     <span><strong>End:</strong></span> ${record.event[0].end}<br/><br/>
                     <span><strong>Location:</strong></span> ${record.event[0].location}<br/><br/>
-                    <span><strong>Description:</strong></span> ${record.event[0].description}<br/><br/>
+                    <span><strong>Class:</strong></span> ${record.event[0].summary}<br/><br/>
                 `);
             });
         });
