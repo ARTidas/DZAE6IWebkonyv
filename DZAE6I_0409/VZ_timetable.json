@@ -1,0 +1,279 @@
+{
+    "VZ_orarend": {
+        "event": [
+            {
+                "id": "1",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240220T111500Z",
+                "end": "20240220T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cb9-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "2",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240227T111500Z",
+                "end": "20240227T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cba-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "3",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240305T111500Z",
+                "end": "20240305T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cbb-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "4",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240312T111500Z",
+                "end": "20240312T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cbc-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "5",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240319T111500Z",
+                "end": "20240319T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cbd-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "6",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240220T150000Z",
+                "end": "20240220T163000Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3d1f-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "7",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240227T111500Z",
+                "end": "20240227T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cba-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "8",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240305T111500Z",
+                "end": "20240305T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cbb-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "9",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240312T111500Z",
+                "end": "20240312T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cbc-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "10",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240319T111500Z",
+                "end": "20240319T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cbd-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "11",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240220T150000Z",
+                "end": "20240220T163000Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3d1f-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "12",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240227T111500Z",
+                "end": "20240227T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cba-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            },
+            {
+                "id": "13",
+                "type": "seminar",
+                "visibility": "public",
+                "start": "20240305T111500Z",
+                "end": "20240305T124500Z",
+                "location": "Teológia Szemere utcai bejárat földszint kis terem (Teologia_Szemere_1/A)",
+                "transp": "OPAQUE",
+                "sequence": "0",
+                "uid": "SDA275e3cbb-0000-0000-0000-000000000000",
+                "description": "",
+                "summary": "Webkönyvtárak (THE_00583_N_5_G) - 2NPTI - Dr. Bednarik László - Órarend",
+                "priority": "5",
+                "class": "PUBLIC",
+                "alarm": {
+                    "trigger": "-PT15M",
+                    "action": "DISPLAY",
+                    "description": "Reminder",
+                    "priority": "5"
+                }
+            }
+        ]
+    }
+}
