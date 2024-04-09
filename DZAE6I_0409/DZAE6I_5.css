@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+button {
+    font-weight: bold;
+}
+
+#box {
+    background-color: #88c08b;
+    height: 10%;
+    padding: 20px;
+    position: absolute;
+
+    width: 300px;
+    left: 0px;
+    top: 300px;
+}
