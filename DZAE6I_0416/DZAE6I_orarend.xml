@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VZ_orarend>
+
+    <university>
+        <name>University of Tokaj</name>
+        <address>
+            <city>Sárospatak</city>
+            <street>Eötvös street</street>
+            <street_number>7</street_number>
+        </address>
+        <contact>
+            <phones>
+                <landline>(06 47) 513 000</landline>
+                <mobile>(06 47) 513 111</mobile>
+            </phones>
+        </contact>
+    </university>
+
+    <class id="1" type="seminar">
+        <subject_name>Valószínűségszámítás és statisztika</subject_name>
+        <presenter>Dr. Földvári Attila József</presenter>
+        <major>PTI</major>
+        <events>
+            <event id="1">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+            <event id="2">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+        </events>
+    </class>
+
+    <class id="2" type="seminar">
+        <subject_name>Webkönyvtárak</subject_name>
+        <presenter>Dr. Bednarik László</presenter>
+        <major>PTI</major>
+        <events>
+            <event id="3">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+            <event id="4">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+        </events>
+    </class>
+
+    <class id="3" type="seminar">
+        <subject_name>Számításelmélet</subject_name>
+        <presenter>...</presenter>
+        <major>PTI</major>
+        <events>
+            <event id="5">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+            <event id="6">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+        </events>
+    </class>
+
+    <class id="4" type="seminar">
+        <subject_name>Operációs rendszerek</subject_name>
+        <presenter>Janics Tamás</presenter>
+        <major>PTI</major>
+        <events>
+            <event id="7">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+            <event id="8">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+        </events>
+    </class>
+
+    <class id="5" type="seminar">
+        <subject_name>Kriptográfia</subject_name>
+        <presenter>...</presenter>
+        <major>PTI</major>
+        <events>
+            <event id="9">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+            <event id="10">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+        </events>
+    </class>
+
+    <class id="6" type="seminar">
+        <subject_name>Alkalmazások fejlesztése projekt labor II.</subject_name>
+        <presenter>Perlaki Attila</presenter>
+        <major>PTI</major>
+        <events>
+            <event id="13">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+            <event id="14">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+        </events>
+    </class>
+
+    <class id="7" type="seminar">
+        <subject_name>Komputergrafika és képfeldolgozás</subject_name>
+        <presenter>Dr. Bednarik László</presenter>
+        <major>PTI</major>
+        <events>
+            <event id="15">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+            <event id="16">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+        </events>
+    </class>
+
+    <class id="8" type="seminar">
+        <subject_name>Kalkulus</subject_name>
+        <presenter>Wiersumné Dr. Gyöngyösi Erika</presenter>
+        <major>PTI</major>
+        <events>
+            <event id="15">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-12</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+            <event id="16">
+                <start_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>12:00</time>
+                </start_datetime>
+                <end_datetime>
+                    <week_type>OddEven</week_type>
+                    <date>2024-02-19</date>
+                    <time>15:25</time>
+                </end_datetime>
+                <address>
+                    <city>Sárospatak</city>
+                    <street>Szemere utca</street>
+                    <room>Teológia I/A</room>
+                </address>
+            </event>
+        </events>
+    </class>
+
+</VZ_orarend>
