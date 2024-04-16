@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<VZ_orarend>
+
+    <event id="1" type="seminar">
+    <datetime>
+        <date>2024-02-12</date>
+        <time_start>13:00</time_start>
+        <time_end>15:00</time_end>
+    </datetime>
+    <address>Szemere I/A</address>
+    <presenter>Dr. Bednarik László</presenter>
+    <major>PTI</major>
+
+</VZ_orarend>

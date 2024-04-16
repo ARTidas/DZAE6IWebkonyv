@@ -16,24 +16,26 @@
     <script src="jquery-ui/jquery.js"></script>
     <script src="jquery-ui/jquery-ui.min.js"></script>
 
-    <script src="DZAE6I_1.js"></script>
+    <script src="DZAE6I_9.js"></script>
     <style>
-        body {
-            background-color: #f00;
+        button {
+            font-weight: bold;
+        }
+        #timetable {
+            background-color: #ddd;
         }
     </style>
 </head>
 <body>
 
-    <section class="container">
-        <h1>JQuery - DZAE6I</h1>
+    <h1>JQuery - AJAX tasks - DZAE6I</h1>
 
-        <input type="text" name="date" id="date">
+    <p><strong>Click to load timetable JSON data</strong></p>
 
-        <footer>
-            <p>Zoltan Veres - DZAE6I</p>
-        </footer>
-    </section>
+    <div id="timetable">SPACE</div>
+    <br/>
+
+    <button id="load">Load data</button>
 
 </body>
 </html>

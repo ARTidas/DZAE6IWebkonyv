@@ -1,0 +1,368 @@
+{
+    "VZ_university": {
+        "name": "University of Tokaj",
+        "address": {
+            "zip_code": "3950",
+            "city": "Sárospatak",
+            "street": "Eötvös street",
+            "street_number": 7
+        },
+        "phone_numbers": [
+            {
+                "landline": "(06 47) 513 000"
+            },
+            {
+                "mobile": "(06 47) 513 111"
+            }
+        ]
+    },
+
+    "VZ_orarend": {
+        "class": [
+            {
+                "subject_name": "Valószínűségszámítás és statisztika",
+                "presenter": "Dr. Földvári Attila József",
+                "major": "PTI",
+                "events": {
+                    "event": [
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        },
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "subject_name": "Webkönyvtárak",
+                "presenter": "Dr. Bednarik László",
+                "major": "PTI",
+                "events": {
+                    "event": [
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        },
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "subject_name": "Számításelmélet",
+                "presenter": "...",
+                "major": "PTI",
+                "events": {
+                    "event": [
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        },
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "subject_name": "Operációs rendszerek",
+                "presenter": "Janics Tamás",
+                "major": "PTI",
+                "events": {
+                    "event": [
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        },
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "subject_name": "Kriptográfia",
+                "presenter": "...",
+                "major": "PTI",
+                "events": {
+                    "event": [
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        },
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "subject_name": "Alkalmazások fejlesztése projekt labor II.",
+                "presenter": "Perlaki Attila",
+                "major": "PTI",
+                "events": {
+                    "event": [
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        },
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "subject_name": "Komputergrafika és képfeldolgozás",
+                "presenter": "Dr. Bednarik László",
+                "major": "PTI",
+                "events": {
+                    "event": [
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        },
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "subject_name": "Kalkulus",
+                "presenter": "Wiersumné Dr. Gyöngyösi Erika",
+                "major": "PTI",
+                "events": {
+                    "event": [
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-12",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        },
+                        {
+                            "start_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "12:00"
+                            },
+                            "end_datetime": {
+                                "week_type": "OddEven",
+                                "date": "2024-02-19",
+                                "time": "15:25"
+                            },
+                            "address": {
+                                "city": "Sárospatak",
+                                "street": "Szemere utca",
+                                "room": "Teológia I/A"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

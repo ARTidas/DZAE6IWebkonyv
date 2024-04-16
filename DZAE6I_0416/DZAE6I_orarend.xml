@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VZ_orarend>
 
-    <university>
-        <name>University of Tokaj</name>
-        <address>
-            <city>Sárospatak</city>
-            <street>Eötvös street</street>
-            <street_number>7</street_number>
-        </address>
-        <contact>
-            <phones>
-                <landline>(06 47) 513 000</landline>
-                <mobile>(06 47) 513 111</mobile>
-            </phones>
-        </contact>
-    </university>
-
     <class id="1" type="seminar">
         <subject_name>Valószínűségszámítás és statisztika</subject_name>
         <presenter>Dr. Földvári Attila József</presenter>
