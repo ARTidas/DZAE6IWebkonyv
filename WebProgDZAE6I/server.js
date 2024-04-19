@@ -20,9 +20,14 @@ app.use('/js/jquery-ui.min.js', express.static(
     __dirname + '/node_modules/jquery-ui-dist/jquery-ui.min.js'
 ));
 
-
+let page_name = 'index';
 app.get('/', (req, res) => {
-    res.render('index');
+    page_name = 'index';
+    res.render(
+        'partials/frame', {
+            page_name: page_name
+        }
+    );
 });
 
 
