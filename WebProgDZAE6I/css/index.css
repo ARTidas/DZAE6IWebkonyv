@@ -57,9 +57,10 @@ body {
     background-color: #aaa;
     color: black;
 }
-#menu nav div:hover div {
+/* TODO: Keeping this code as this can be used as a fallback in case JQuery fails... */
+/*#menu nav div:hover div {
     display: block;
-}
+}*/
 
 
 
