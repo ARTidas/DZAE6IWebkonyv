@@ -1,0 +1,26 @@
+{
+  "name": "drones",
+  "version": "1.0.0",
+  "description": "A project which showcases and compares drones and gives an insight into drone networks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ARTidas/DZAE6IWebkonyv.git"
+  },
+  "keywords": [
+    "drone",
+    "drone-network"
+  ],
+  "author": "Zoltan Veres",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ARTidas/DZAE6IWebkonyv/issues"
+  },
+  "homepage": "https://github.com/ARTidas/DZAE6IWebkonyv#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
