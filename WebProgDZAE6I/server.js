@@ -2,7 +2,11 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Setup the template model
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/html');
 
+// Include files
 app.use('/css', express.static(
     __dirname + '/css/')
 );
@@ -16,10 +20,16 @@ app.use('/js/jquery-ui.min.js', express.static(
     __dirname + '/node_modules/jquery-ui-dist/jquery-ui.min.js'
 ));
 
+
 app.get('/', (req, res) => {
+    res.render('index');
+});
+
+
+/*app.get('/', (req, res) => {
     //res.writeHead(200, {'Content-Type': 'text/html'});
     res.sendFile(__dirname + '/html/index.html');
-});
+});*/
 
 
 app.listen(PORT, () => {
