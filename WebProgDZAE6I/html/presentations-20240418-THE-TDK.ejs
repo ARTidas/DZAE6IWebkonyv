@@ -1,41 +1,73 @@
 <h1>Presentation</h1>
 
-<h2>Video</h2>
+<h2 id="slideshow_video">Video</h2>
 <section>
     <video id="presentation" width="100%" controls>
         <source src="/media/zoltan_veres_20240418_THE_TDK_drone_networks.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+</section>
 
-    <section>
-        <button onclick="playPause()">Play/Pause</button>
-        <button onclick="toggleMute()">Mute/Unmute</button>
-    </section>
+
+<h2>Slideshow preview</h2>
+<section id="slideshow_preview">
 </section>
 <script>
-    const video = document.getElementById("presentation");
+    $(document).ready(function() {
+        const slideshow_preview = document.getElementById("slideshow_preview");
+        const slideshow_preview_table = document.createElement('table');
+        let slideshow_preview_table_tr;
 
-    function playPause() {
-        if (video.paused) {
-            video.play();
-        }
-        else {
-            video.pause();
-        }
-    }
+        for (let i = 1; i <= 23; i++) {
+            if (i % 4 === 1) {
+                slideshow_preview_table_tr = document.createElement('tr');
+                slideshow_preview_table.appendChild(slideshow_preview_table_tr);
+            }
 
-    function toggleMute() {
-        video.muted = !video.muted;
-    }
+            let slideshow_preview_table_tr_td = document.createElement('td');
+            slideshow_preview_table_tr_td.className = 'slideshow_preview_td';
+            let slideshow_preview_image = document.createElement('img');
+            slideshow_preview_image.className = 'slideshow_preview_image';
+            slideshow_preview_image.setAttribute('data-jumpto', `slideshow_image_${i}`);
+            slideshow_preview_image.src = `/media/dronhalozatok_vizsgalata__szimulacion_alapulo_betekintes.pptx_${i}.jpg`;
+            slideshow_preview_table_tr_td.appendChild(slideshow_preview_image);
+            slideshow_preview_table_tr.appendChild(slideshow_preview_table_tr_td);
+        }
+
+        slideshow_preview.appendChild(slideshow_preview_table);
+
+        $('.slideshow_preview_image').hover(
+            function() {
+                $(this).css({
+                    'transform': 'scale(1.3)',
+                    'transition': 'transform 0.3s ease'
+                });
+            },
+            function() {
+                $(this).css('transform', 'scale(1)');
+            }
+        );
+        $('.slideshow_preview_image').click(function() {
+            //console.log($(this));
+            //console.log($(this).data('jumpto'));
+            $('html, body').animate(
+                {
+                    scrollTop: $('#' + $(this).data('jumpto')).offset().top
+                },
+                1000
+            );
+        });
+    });
 </script>
 <style>
-    section button {
-        padding: 10px;
-        margin-right: 10px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        cursor: pointer;
+    #slideshow_preview table {
+        width: 100%;
+    }
+    .slideshow_preview_td {
+        width: 20%;
+    }
+    .slideshow_preview_image {
+        width: 100%;
     }
 </style>
 
@@ -44,17 +76,97 @@
 <section id="slideshow">
 </section>
 <script>
-    const slideshow = document.getElementById("slideshow");
+    $(document).ready(function() {
+        const slideshow = document.getElementById("slideshow");
 
-    for (let i = 1; i <= 23; i++) {
-        let slideshow_image = document.createElement('img');
-        slideshow_image.src = `/media/dronhalozatok_vizsgalata__szimulacion_alapulo_betekintes.pptx_${i}.jpg`;
-        slideshow.appendChild(slideshow_image);
-        slideshow.appendChild(document.createElement('hr'));
-    }
+        for (let i = 1; i <= 23; i++) {
+            let slideshow_image = document.createElement('img');
+            slideshow_image.src = `/media/dronhalozatok_vizsgalata__szimulacion_alapulo_betekintes.pptx_${i}.jpg`;
+            slideshow_image.id = `slideshow_image_${i}`;
+            slideshow.appendChild(slideshow_image);
+            slideshow.appendChild(document.createElement('hr'));
+        }
+    });
 </script>
 <style>
     #slideshow img {
         width: 100%;
+    }
+</style>
+
+
+<div id="sidebar">
+    <button id="jump_to_menu">Jump to Menu</button>
+    <button id="jump_to_video">Jump to Video</button>
+    <button id="jump_to_preview">Jump to Preview</button>
+    <button id="toggle_video_play">Play/Pause</button>
+    <button id="toggle_video_sound">Mute/Unmute</button>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#jump_to_menu').click(function() {
+            $('html, body').animate(
+                {
+                    scrollTop: 0
+                },
+                1000
+            );
+        });
+
+        $('#jump_to_preview').click(function() {
+            $('html, body').animate(
+                {
+                    scrollTop: $('#slideshow_preview').offset().top
+                },
+                1000
+            );
+        });
+
+        $('#jump_to_video').click(function() {
+            $('html, body').animate(
+                {
+                    scrollTop: $('#slideshow_video').offset().top
+                },
+                1000
+            );
+        });
+
+        const video = document.getElementById('presentation');
+        $('#toggle_video_play').click(function() {
+            if (video.paused) {
+                video.play();
+            }
+            else {
+                video.pause();
+            }
+        });
+        $('#toggle_video_sound').click(function() {
+            video.muted = !video.muted;
+        });
+    });
+</script>
+<style>
+    #sidebar {
+        position: fixed;
+        top: 75%;
+        left: 20px;
+        transform: translateY(-50%);
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    #sidebar button {
+        border: 1px solid #000;
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    #sidebar button:hover {
+        background-color: #555;
     }
 </style>
