@@ -1,0 +1,60 @@
+<h1>Presentation</h1>
+
+<h2>Video</h2>
+<section>
+    <video id="presentation" width="100%" controls>
+        <source src="/media/zoltan_veres_20240418_THE_TDK_drone_networks.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <section>
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="toggleMute()">Mute/Unmute</button>
+    </section>
+</section>
+<script>
+    const video = document.getElementById("presentation");
+
+    function playPause() {
+        if (video.paused) {
+            video.play();
+        }
+        else {
+            video.pause();
+        }
+    }
+
+    function toggleMute() {
+        video.muted = !video.muted;
+    }
+</script>
+<style>
+    section button {
+        padding: 10px;
+        margin-right: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+
+<h2>Slideshow</h2>
+<section id="slideshow">
+</section>
+<script>
+    const slideshow = document.getElementById("slideshow");
+
+    for (let i = 1; i <= 23; i++) {
+        let slideshow_image = document.createElement('img');
+        slideshow_image.src = `/media/dronhalozatok_vizsgalata__szimulacion_alapulo_betekintes.pptx_${i}.jpg`;
+        slideshow.appendChild(slideshow_image);
+        slideshow.appendChild(document.createElement('hr'));
+    }
+</script>
+<style>
+    #slideshow img {
+        width: 100%;
+    }
+</style>

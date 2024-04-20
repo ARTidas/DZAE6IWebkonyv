@@ -13,6 +13,9 @@ app.use('/css', express.static(
 app.use('/js', express.static(
     __dirname + '/js/')
 );
+app.use('/media', express.static(
+    __dirname + '/media/')
+);
 
 // Include files which are not in their respective folder
 app.use('/css/jquery-ui.min.css', express.static(
@@ -30,6 +33,22 @@ app.use('/js/jquery-ui.min.js', express.static(
 let page_name = 'index';
 app.get('/', (req, res) => {
     page_name = 'index';
+    res.render(
+        'partials/frame', {
+            page_name: page_name
+        }
+    );
+});
+app.get('/presentations/20240418-THE-TDK', (req, res) => {
+    page_name = 'presentations-20240418-THE-TDK';
+    res.render(
+        'partials/frame', {
+            page_name: page_name
+        }
+    );
+});
+app.get('/drones/uavs', (req, res) => {
+    page_name = 'drones-uavs';
     res.render(
         'partials/frame', {
             page_name: page_name

@@ -6,6 +6,9 @@ body {
     padding: 0;
 }
 
+#main-section {
+    padding: 10px;
+}
 
 /* Menu */
 /* https://www.w3schools.com/howto/howto_css_subnav.asp */
@@ -62,6 +65,13 @@ body {
     display: block;
 }*/
 
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
 
 
 
