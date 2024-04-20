@@ -1,5 +1,106 @@
 <h1>Presentation</h1>
 
+<h2 id="slideshow_article">Article</h2>
+<article>
+    <p>
+        The presentation titled "Exploring Drone Networks: Simulation-Based Insights" 
+        by Zoltán Veres, a Software Development Engineer, 
+        delves into the realm of drone networks, simulation technologies, 
+        and their implications across various sectors. Here's a summarized overview:
+    </p>
+    
+    <h3>Background</h3>
+    <p>
+        <strong>Drone Technology:</strong>
+        Drones are remote-controlled or pre-programmed aircraft used for diverse 
+        purposes such as aerial photography, agriculture, rescue operations, and 
+        delivery services.
+    </p>
+    <p>
+        <strong>Drone Networks:</strong>
+        These are systems where multiple drones collaborate and communicate either
+        with each other or a central control point, serving military, civilian, 
+        or mixed purposes.
+    </p>
+
+    <h3>Theme Selection</h3>
+    <p>
+        The drone industry is rapidly growing, spanning various fields like 
+        agriculture, construction, transportation, logistics, and more.
+    </p>
+    <p>
+        It involves a multidisciplinary approach, attracting professionals 
+        from fields such as aviation, electronics, software development, 
+        and 3D printing.
+    </p>
+    <p>
+        Innovation and technology advancements in drone technology offer opportunities 
+        for societal benefits, including higher living standards, improved services, 
+        disaster management, and enhanced public safety.
+    </p>
+
+    <h3>Literature Review</h3>
+    <p>
+        Various research papers discuss the applications, challenges, and ethical 
+        considerations of drone technology, especially in emergency medicine, 
+        regulatory frameworks, communication protocols, and network coordination.
+    </p>
+
+    <h3>Challenges</h3>
+    <p>Lack of framework and dialogue among stakeholders.</p>
+    <p>
+        The need for a comprehensive approach to address regulatory, 
+        safety, and ethical concerns.
+    </p>
+    <p>
+        Development of robust systems to withstand challenges and potential threats.
+    </p>
+
+    <h3>Objectives</h3>
+    <p>Develop a framework for drone network operation.</p>
+    <p>Address challenges, propose solutions, and document experiences.</p>
+    <p>Aim to create a physical model of a drone network.</p>
+
+    <h3>Research Approach</h3>
+    <p>Adopt a practical approach focusing on simulation, system observations, and iterative improvements.</p>
+    <p>Utilize databases, mapping, weather data, and software tools for analysis.</p>
+
+    <h3>Conclusion</h3>
+    <p>
+        Despite the challenges, ongoing developments in drone technology offer 
+        promising opportunities for innovation and societal advancement.
+    </p>
+    <p>
+        Continued research, collaboration, and responsible deployment are essential 
+        for harnessing the full potential of drone networks while addressing 
+        associated risks and ethical considerations.
+    </p>
+
+    <h3>Future Directions</h3>
+    <p>
+        Further exploration of sensor technologies and data communication in 
+        challenging environments.
+    </p>
+    <p>
+        Collaboration with existing drone management solutions and 
+        research initiatives.
+    </p>
+    <p>
+        Continued monitoring of technological advancements and 
+        regulatory frameworks.
+    </p>
+    <p>
+        The presentation concludes with a call for questions and expresses 
+        gratitude for the audience's attention.
+    </p>
+    <p>
+        Source of the article: 
+        <a href="https://chat.openai.com/c/b44d7ce4-8f02-4471-8ca3-def383131851" target="_blank">
+            Personal chat with ChatGPT
+        </a>
+    </p>
+</article>
+
 <h2 id="slideshow_video">Video</h2>
 <section>
     <video id="presentation" width="100%" controls>
@@ -97,6 +198,7 @@
 
 <div id="sidebar">
     <button id="jump_to_menu">Jump to Menu</button>
+    <button id="jump_to_slideshow_article">Jump to Article</button>
     <button id="jump_to_video">Jump to Video</button>
     <button id="jump_to_preview">Jump to Preview</button>
     <button id="toggle_video_play">Play/Pause</button>
@@ -104,10 +206,45 @@
 </div>
 <script>
     $(document).ready(function() {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 38) {
+                //$('#sidebar').show();
+                //$('#sidebar').stop().slideDown('fast');
+                //$('#sidebar').fadeTo(50, 0.8);
+                $('#sidebar').stop().animate(
+                    {
+                        top: '23px'
+                    },
+                    'fast'
+                );
+            }
+            else {
+                //$('#sidebar').hide();
+                //$('#sidebar').stop().slideUp('fast');
+                //$('#sidebar').fadeTo(50, 0);
+                $('#sidebar').stop().animate(
+                    {
+                        top: '-23px'
+                    },
+                    'fast'
+                );
+            }
+        });
+
+        
         $('#jump_to_menu').click(function() {
             $('html, body').animate(
                 {
                     scrollTop: 0
+                },
+                1000
+            );
+        });
+
+        $('#jump_to_slideshow_article').click(function() {
+            $('html, body').animate(
+                {
+                    scrollTop: $('#slideshow_article').offset().top
                 },
                 1000
             );
@@ -148,7 +285,12 @@
 <style>
     #sidebar {
         position: fixed;
-        top: 75%;
+        /*top: 75%;*/
+        /*top: 23px;*/
+        top: -23px;
+        /*top: 61px;*/
+        /*top: 0px;/*
+        /*display: none;*/
         left: 20px;
         transform: translateY(-50%);
         background-color: #333;
@@ -156,6 +298,8 @@
         padding: 10px;
         cursor: pointer;
         z-index: 1000;
+        opacity: 0.8;
+        /*opacity: 0.0;*/
     }
 
     #sidebar button {
