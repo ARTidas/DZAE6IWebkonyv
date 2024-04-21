@@ -1,0 +1,80 @@
+<h1>Unmanned Aerial Vehicles (UAVs)</h1>
+
+<p>Data source: <a href="https://drones.cnas.org/drones/">https://drones.cnas.org/drones/</a></p>
+
+<section id="drones">
+</section>
+<script>
+    $(document).ready(function() {
+
+        const drone_attributes = [
+            //'drone_id',
+            'country',
+            'company',
+            'platform',
+            'endurance',
+            'payload',
+            'range',
+        ];
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const tbody = document.createElement('tbody');
+        let tr = document.createElement('tr');
+        for (let i = 0; i < drone_attributes.length; i++) {
+            let th = document.createElement('th');
+            th.innerText = drone_attributes[i];
+            tr.appendChild(th);
+        }
+        thead.appendChild(tr);
+        table.appendChild(thead);
+
+        $.getJSON('/data_scraper/drones_data.json', function(records) {
+            //console.log(record);
+            for (let i = 0; i < records.length; i++) {
+                let tr = document.createElement('tr');
+                
+                for (let j = 0; j < drone_attributes.length; j++) {
+                    let td = document.createElement('td');
+                    td.innerText = records[i][drone_attributes[j]];
+                    tr.appendChild(td);
+                }
+            
+                tbody.appendChild(tr);
+            }
+        });
+
+        table.appendChild(tbody);
+        $('#drones').append(table);
+
+    });
+</script>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    tr {
+        background-color: #aaa;
+    }
+    tr:nth-child(odd) {
+        background-color: #ccc;
+    }
+    tr:hover {
+        background-color: #fff;
+    }
+
+    table, th, td {
+        border: 1px solid #bbb;
+    }
+
+    th, td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #333;
+        color: #fff;
+    }
+</style>

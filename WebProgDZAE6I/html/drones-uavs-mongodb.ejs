@@ -1,0 +1,44 @@
+<h1>Unmanned Aerial Vehicles (UAVs)</h1>
+
+<section id="drones">
+</section>
+<br style="clear: both;"/>
+<script>
+    $(document).ready(function() {
+
+        const drone_attributes = [
+            'drone_id',
+            'country',
+            'company',
+            'platform',
+            'endurance',
+            'payload',
+            'range',
+        ];
+
+        $.get('/api/get-drones', function(data) {
+            for (let i = 0; i < data.length; i++) {
+                let div = document.createElement('div');
+                div.innerHTML = `
+                    <p><span><strong>Drone ID:</strong></span> ${data[i].drone_id}</p>
+                    <p><span><strong>Country:</strong></span> ${data[i].country}</p>
+                    <p><span><strong>Company:</strong></span> ${data[i].company}</p>
+                    <p><span><strong>Platform:</strong></span> ${data[i].platform}</p>
+                    <p><span><strong>Endurance:</strong></span> ${data[i].endurance}</p>
+                    <p><span><strong>Payload:</strong></span> ${data[i].payload}</p>
+                    <p><span><strong>Range:</strong></span> ${data[i].range}</p>
+                `;
+                $('#drones').append(div);
+            }
+        });
+
+    });
+</script>
+<style>
+    #drones div {
+        float: left;
+        width: 33%;
+        border: 1px solid #ccc;
+        background-color: #ddd;
+    }
+</style>
