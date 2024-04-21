@@ -76,7 +76,11 @@ app.get('/papers/simple-learning-algorithms-in-limited-performance-systems-robot
         'papers-simple-learning-algorithms-in-limited-performance-systems-robots'
     );
 });
-
+app.get('/papers/affordable-lidar-equipped-drone-applications-expanding-accessibility-and-utility-in-monitoring', (req, res) => {
+    res.render(
+        'papers-affordable-lidar-equipped-drone-applications-expanding-accessibility-and-utility-in-monitoring'
+    );
+});
 
 app.get('/presentations/20240418-THE-TDK', (req, res) => {
     page_name = 'presentations-20240418-THE-TDK';
@@ -87,10 +91,14 @@ app.get('/presentations/20240418-THE-TDK', (req, res) => {
     );
 });
 
-/*app.get('/', (req, res) => {
-    //res.writeHead(200, {'Content-Type': 'text/html'});
-    res.sendFile(__dirname + '/html/index.html');
-});*/
+app.get('/resources', (req, res) => {
+    page_name = 'resources';
+    res.render(
+        'partials/frame', {
+            page_name: page_name
+        }
+    );
+});
 
 
 app.listen(PORT, () => {
