@@ -1,0 +1,65 @@
+<h1>User registration</h1>
+
+<form id="registration_form">
+    <input type="text" id="username" name="username" placeholder="Username" required>
+    <br/>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <br/>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+    <br/>
+    <button type="submit">Register</button>
+</form>
+
+<script>
+    $(document).ready(function() {
+
+        $('#registration_form').submit(function(event) {
+            event.preventDefault();
+
+            const formData = $(this).serialize();
+            //console.log(formData);
+            $.post('/api/register-user', formData, function(response) {
+                console.log('OK: Registration successful:', response);
+            }).fail(function(xhr, status, error) {
+                console.error('ERROR: Registration failed:', error);
+            });
+        });
+
+    });
+</script>
+<style>
+    #registration_form {
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #registration_form input[type="text"],
+    #registration_form input[type="email"],
+    #registration_form input[type="password"] {
+        width: 48%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #fff;
+    }
+
+    #registration_form button[type="submit"] {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #registration_form button[type="submit"]:hover {
+        background-color: #555;
+    }
+</style>

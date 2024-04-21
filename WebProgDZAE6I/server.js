@@ -1,12 +1,18 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
+const bodyParser = require('body-parser');
+const mongodb_url = 'mongodb://localhost:27017';
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Middleware to parse incoming request bodies
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Backend API urls
 app.get('/api/get-drones', async (req, res) => {
     try {
-        const client = await MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true, useUnifiedTopology: true });
+        const client = await MongoClient.connect(mongodb_url, { useNewUrlParser: true, useUnifiedTopology: true });
         const db = client.db('drones_database');
         const collection = db.collection('drones_collection');
 
@@ -15,8 +21,41 @@ app.get('/api/get-drones', async (req, res) => {
 
         client.close();
     } catch (error) {
-        console.error('Error retrieving drones data:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        console.error('ERROR: Error retrieving drones data:', error);
+        res.status(500).json({ error: 'ERROR: Internal Server Error' });
+    }
+});
+app.post('/api/register-user', async (req, res) => {
+
+    try {
+        console.log(req.body);
+        const { username, email, password } = req.body;
+
+        // TODO: Do backend data validation here.
+
+        const client = await MongoClient.connect(mongodb_url, { useNewUrlParser: true, useUnifiedTopology: true });
+        const db = client.db('drones_database');
+        const collection = db.collection('users_collection');
+
+        const existingUser = await collection.findOne({ $or: [{ username }, { email }] });
+        if (existingUser) {
+            return res.status(400).json({ error: 'ERROR: Username and/or email is already registered' });
+        }
+
+        await collection.insertOne(
+            {
+                username,
+                email,password
+            }
+        );
+
+        res.json({ message: 'OK: Registration successful' });
+
+        client.close();
+    }
+    catch (error) {
+        console.error('ERROR: Error registering user:', error);
+        res.status(500).json({ error: 'ERROR: Internal Server Error' });
     }
 });
 
