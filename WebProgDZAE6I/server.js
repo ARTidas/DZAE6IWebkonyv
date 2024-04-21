@@ -61,6 +61,31 @@ app.get('/', (req, res) => {
     );
 });
 
+app.get('/user/register', (req, res) => {
+    page_name = 'user-register';
+    res.render(
+        'partials/frame', {
+            page_name: page_name
+        }
+    );
+});
+app.get('/user/login', (req, res) => {
+    page_name = 'user-login';
+    res.render(
+        'partials/frame', {
+            page_name: page_name
+        }
+    );
+});
+app.get('/user/profile', (req, res) => {
+    page_name = 'user-profile';
+    res.render(
+        'partials/frame', {
+            page_name: page_name
+        }
+    );
+});
+
 app.get('/drones/uavs', (req, res) => {
     page_name = 'drones-uavs';
     res.render(
