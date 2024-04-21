@@ -39,16 +39,47 @@ app.get('/', (req, res) => {
         }
     );
 });
-app.get('/presentations/20240418-THE-TDK', (req, res) => {
-    page_name = 'presentations-20240418-THE-TDK';
+
+app.get('/drones/uavs', (req, res) => {
+    page_name = 'drones-uavs';
     res.render(
         'partials/frame', {
             page_name: page_name
         }
     );
 });
-app.get('/drones/uavs', (req, res) => {
-    page_name = 'drones-uavs';
+app.get('/drones/ugvs', (req, res) => {
+    page_name = 'drones-ugvs';
+    res.render(
+        'partials/frame', {
+            page_name: page_name
+        }
+    );
+});
+
+app.get('/drone-networks/demo', (req, res) => {
+    page_name = 'drone-networks-demo';
+    res.render(
+        'partials/frame', {
+            page_name: page_name
+        }
+    );
+});
+
+app.get('/papers/exploring-drone-networks-simulation-based-insights', (req, res) => {
+    res.render(
+        'papers-exploring-drone-networks-simulation-based-insights'
+    );
+});
+app.get('/papers/simple-learning-algorithms-in-limited-performance-systems-robots', (req, res) => {
+    res.render(
+        'papers-simple-learning-algorithms-in-limited-performance-systems-robots'
+    );
+});
+
+
+app.get('/presentations/20240418-THE-TDK', (req, res) => {
+    page_name = 'presentations-20240418-THE-TDK';
     res.render(
         'partials/frame', {
             page_name: page_name

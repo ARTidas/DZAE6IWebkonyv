@@ -6,7 +6,25 @@ body {
     padding: 0;
 }
 
-#main-section {
+#header_image {
+    background-color: #111;
+    padding: 10px;
+    padding-bottom: 0px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    vertical-align: middle;
+}
+#header_image img {
+    height: 40px;
+    float: left;
+    margin-right: 10px;
+}
+#header_image div {
+    margin-top: 10px;
+}
+
+#main_section {
     padding: 10px;
 }
 
