@@ -5,3 +5,40 @@
 <% } else { %>
     <p>User not authenticated!</p>
 <% } %>
+
+<!-- TODO: Make this url available  -->
+<form action="/user/update-profile" method="post">
+    <span>Introduction:</span><br>
+    <textarea id="introduction" name="introduction" rows="4" cols="50"></textarea><br>
+
+    <span>Birthday:</span><br>
+    <input type="text" id="birthday" name="birthday" placeholder="Select date" autocomplete="off">
+
+    <span>Favorite Color:</span><br>
+    <input type="color" id="favorite_color" name="favorite_color"><br>
+
+    <input type="checkbox" id="is_adult" name="is_adult">
+    <span>I am an adult</span><br>
+
+    <span>Gender:</span><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <span>Male</span><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <span>Female</span><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <span>Other</span><br>
+
+    <span>Allergies:</span><br>
+    <input list="allergies" id="allergies_input" name="allergies">
+    <datalist id="allergies">
+        <option value="lactose">
+        <option value="peanut">
+        <option value="nuts">
+        <option value="shellfish">
+        <option value="wheat">
+        <option value="egg">
+        <option value="fish">
+    </datalist><br>
+
+    <button type="submit">Update Profile</button>
+</form>
