@@ -28,7 +28,7 @@ app.get('/api/get-drones', async (req, res) => {
 app.post('/api/register-user', async (req, res) => {
 
     try {
-        console.log(req.body);
+        //console.log(req.body);
         const { username, email, password } = req.body;
 
         // TODO: Do backend data validation here.
@@ -45,7 +45,8 @@ app.post('/api/register-user', async (req, res) => {
         await collection.insertOne(
             {
                 username,
-                email,password
+                email,
+                password
             }
         );
 
