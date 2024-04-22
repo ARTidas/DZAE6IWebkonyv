@@ -1,0 +1,7 @@
+<h1>User Profile</h1>
+
+<% if (user) { %>
+    <p>Welcome <%= user.username %> (<%= user.email %>)!</p>
+<% } else { %>
+    <p>User not authenticated!</p>
+<% } %>

@@ -1,0 +1,128 @@
+<h1>User login</h1>
+
+<form id="login_form">
+    <!-- TODO: Should this form have the required attribute? -->
+    <input type="email" id="email" name="email" placeholder="Email" />
+    <br>
+    <input type="password" id="password" name="password" placeholder="Password" />
+    <br>
+    <button type="submit">Login</button>
+</form>
+<div id="form_response" style="margin-left: 5px;"></div>
+<br style="clear:both" />
+
+<script>
+    $(document).ready(function() {
+
+        $('#login_form').submit(function(event) {
+            event.preventDefault();
+
+            $('#form_response').html('');
+            $('#email, #password').css('border-color', '#ccc');
+
+            const email = $('#email').val().trim();
+            const password = $('#password').val().trim();
+
+            if (!email || !password) {
+                $('#form_response').html('<p>Please fill in all required fields:</p>');
+                if (!email) {
+                    $('#form_response').append('<p>E-mail</p>');
+                    $('#email').css('border-color', '#f00');
+                }
+                if (!password) {
+                    $('#form_response').append('<p>Password</p>');
+                    $('#password').css('border-color', '#f00');
+                }
+                $('#form_response').animate(
+                    {
+                        backgroundColor: "#fcc"
+                    },
+                    'slow'
+                );
+
+                return;
+            }
+
+            const formData = $(this).serialize();
+
+            $.post('/api/login-user', formData, function(response) {
+                $('#form_response').html(`
+                    <p>Login successful!</p>
+                    <p>Please visit the profile page: <a href="/user/profile">Profile...</a></p>
+                `);
+                $('#form_response').animate(
+                    {
+                        backgroundColor: "#cfc"
+                    },
+                    'fast'
+                );
+            }).fail(function(xhr, status, error) {
+                $('#form_response').html(`
+                    <p>Login failed:</p>
+                    <p>${error}</p>
+                `);
+                $('#form_response').animate(
+                    {
+                        backgroundColor: "#fcc"
+                    },
+                    'fast'
+                );
+                $('#email, #password').css('border-color', 'red');
+            });
+        });
+
+    });
+</script>
+<style>
+    #login_form,
+    #form_response {
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 43%;
+        float: left;
+    }
+
+    #login_form input[type="email"],
+    #login_form input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #fff;
+    }
+
+    #login_form button[type="submit"] {
+        width: 97%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #login_form button[type="submit"]:hover {
+        background-color: #555;
+    }
+
+    #form_response a {
+        display: inline-block;
+        border: 1px solid #ccc;
+        background-color: #333;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+        text-decoration: bold;
+        padding: 5px;
+    }
+    #form_response a:hover {
+        background-color: #fff;
+        color: #333;
+    }
+</style>

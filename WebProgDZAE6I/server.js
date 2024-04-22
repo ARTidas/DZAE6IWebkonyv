@@ -1,9 +1,18 @@
 const express = require('express');
+const session = require('express-session');
 const { MongoClient } = require('mongodb');
 const bodyParser = require('body-parser');
+const crypto = require('crypto');
 const mongodb_url = 'mongodb://localhost:27017';
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Middleware for session management
+app.use(session({
+    secret: generateSessionSecret(),
+    resave: false,
+    saveUninitialized: false
+}));
 
 // Middleware to parse incoming request bodies
 app.use(bodyParser.json());
@@ -26,7 +35,6 @@ app.get('/api/get-drones', async (req, res) => {
     }
 });
 app.post('/api/register-user', async (req, res) => {
-
     try {
         //console.log(req.body);
         const { username, email, password } = req.body;
@@ -46,7 +54,7 @@ app.post('/api/register-user', async (req, res) => {
             {
                 username,
                 email,
-                password
+                password // TODO: We need to use password encription!!!
             }
         );
 
@@ -59,6 +67,42 @@ app.post('/api/register-user', async (req, res) => {
         res.status(500).json({ error: 'ERROR: Internal Server Error' });
     }
 });
+app.post('/api/login-user', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+
+        const client = await MongoClient.connect(mongodb_url, { useNewUrlParser: true, useUnifiedTopology: true });
+        const db = client.db('drones_database');
+        const collection = db.collection('users_collection');
+        
+        const user = await collection.findOne({ email });
+        if (!user) {
+            return res.status(404).json({ message: 'User not found by email!' });
+        }
+        // TODO: We need to use password encription!!!
+        if (password !== user.password) {
+            return res.status(401).json({ message: 'Invalid password!' });
+        }
+
+        //return res.status(200).json({ message: 'Login successful' });
+        req.session.user = {
+            _id         : user._id,
+            email       : user.email,
+            username    : user.username
+        };
+        res.writeHead(
+            301,
+            {
+                Location: `http://localhost:3000` // TODO: Somewhy this does not redirect!
+            }
+        ).end();
+    }
+    catch (error) {
+        console.error('Error:', error);
+        return res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
 
 // Setup the template model
 app.set('view engine', 'ejs');
@@ -118,10 +162,20 @@ app.get('/user/login', (req, res) => {
     );
 });
 app.get('/user/profile', (req, res) => {
+    let user_data;
+    if (req.session && req.session.user) {
+        user_data = req.session.user;
+        //res.status(200).json(user_data);
+    }
+    else {
+        res.status(401).json({ message: 'Unauthorized' });
+    }
+
     page_name = 'user-profile';
     res.render(
         'partials/frame', {
-            page_name: page_name
+            page_name: page_name,
+            user: user_data
         }
     );
 });
@@ -205,3 +259,11 @@ app.get('/resources', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+function generateSessionSecret() {
+    return (
+        crypto
+            .randomBytes(32)
+            .toString('hex')
+    );
+};
