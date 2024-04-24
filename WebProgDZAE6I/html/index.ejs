@@ -4,3 +4,25 @@
     <li>Statistical data here: How many drones we have?</li>
     <li>How many accounts we have?</li>
 </ul>
+
+<h1>University of Tokaj</h1>
+<p>Also known as "Tokaj-Hegyalja Egyetem" (THE).</p>
+
+<h1>Drone Technology Research Center</h1>
+<h2>Number of drones in our laboratory</h2>
+<p id="drone_count">Loading...</p>
+
+<script>
+    fetch('/api/count-drones')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('drone_count').textContent = data.count;
+        })
+        .catch(error => {
+            console.error('Error fetching drone count:', error);
+            document.getElementById('drone_count').textContent = 'Error fetching drone count';
+        });
+</script>
+<style>
+
+</style>
