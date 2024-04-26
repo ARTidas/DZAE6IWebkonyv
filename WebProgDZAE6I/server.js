@@ -117,6 +117,21 @@ app.get('/api/count-drones', async (req, res) => {
         res.status(500).json({ error: 'ERROR: Internal Server Error' });
     }
 });
+app.get('/api/count-users', async (req, res) => {
+    try {
+        const client = await MongoClient.connect(mongodb_url, { useNewUrlParser: true, useUnifiedTopology: true });
+        const db = client.db('drones_database');
+        const collection = db.collection('users_collection');
+
+        const response = await collection.countDocuments();
+        res.json(response);
+
+        client.close();
+    } catch (error) {
+        console.error('ERROR: Error retrieving data:', error);
+        res.status(500).json({ error: 'ERROR: Internal Server Error' });
+    }
+});
 
 
 // Setup the template model
