@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <title>Logo</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="description" content="Logo" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header>
+        <h1>Logo - DZAE6I</h1>
+    </header>
+
+    <section class="container">
+        <button id="save">Save logo</button>
+        <!-- <canvas id="canvas" width="700" height="350"></canvas> -->
+        <!-- <canvas id="canvas"></canvas> -->
+        <canvas id="canvas" width="700" height="350"></canvas>
+    </section>
+
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+        /*#canvas {
+            border: 1px solid #000;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 200vw;
+        }*/
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const canvas        = document.getElementById('canvas');
+
+            // This solution requires JQuery
+            // https://teamtreehouse.com/community/saving-canvas-as-image-jquery
+            /*const canvas_jq     = $('#canvas');
+            $('#save').click(function() {
+                const data_url = canvas_jq[0].toDataURL('image/png');
+                const w = window.open('about:blank', 'image from canvas');
+                w.document.write(`<img src='"${data_url}"' alt="logo from canvas"/>`);
+            });*/
+
+            const save = document.getElementById('save');
+            save.addEventListener('click', function() {
+                const link = document.createElement('a');
+                link.download = 'logo.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+
+            const context           = canvas.getContext('2d');
+            const canvas_width      = canvas.width;
+            const canvas_height     = canvas.height;
+            const logo_color        = '#bbb'
+            const text_color        = '#333'
+            const circle_radius     = (canvas.width / 14); // With 700px canvas width, it will be 50px
+            const font_size_px      = (canvas.width / 20); // With 700px canvas width, it will be 35px
+            
+            // Clear the canvas
+            context.clearRect(0, 0, canvas_width, canvas_height);
+
+            // Circle
+            context.beginPath();
+            context.arc(
+                (canvas_width / 2),
+                (canvas_height / 2),
+                circle_radius,
+                0,
+                Math.PI * 2
+            );
+            context.fillStyle = logo_color;
+            context.fill();
+
+            // Triangle
+            context.beginPath();
+            context.moveTo(canvas_width / 2 - circle_radius, canvas_height / 2);
+            context.lineTo(canvas_width / 2 + circle_radius, canvas_height / 2);
+            context.lineTo(canvas_width / 2, canvas_height - circle_radius * 0.6);
+            context.closePath();
+            context.fillStyle = logo_color;
+            context.fill();
+
+            // Right wing
+            for (let i = 0; i < 3; i++) {
+                context.beginPath();
+                context.moveTo(
+                    canvas_width / 2 + circle_radius * 1.4,
+                    canvas_height / 2 + circle_radius / 3 - circle_radius * i * 0.75
+                );
+                context.lineTo(
+                    canvas_width - circle_radius * 1.4,
+                    circle_radius * 1.6 + circle_radius / 3 - circle_radius * i * 0.75
+                );
+                context.strokeStyle = logo_color;
+                context.lineWidth = circle_radius / 2;
+                context.lineCap = 'round';
+                context.stroke();
+            }
+
+            // Left wing
+            for (let i = 0; i < 3; i++) {
+                context.beginPath();
+                context.moveTo(
+                    canvas_width / 2 - circle_radius * 1.4,
+                    canvas_height / 2 + circle_radius / 3 - circle_radius * i * 0.75
+                );
+                context.lineTo(
+                    circle_radius * 1.4,
+                    circle_radius * 1.6 + circle_radius / 3 - circle_radius * i * 0.75
+                );
+                context.strokeStyle = logo_color;
+                context.lineWidth = circle_radius / 2;
+                context.lineCap = 'round';
+                context.stroke();
+            }
+
+            // Text line 1
+            context.font = `bold ${font_size_px}px Courier`;
+            context.fillStyle = text_color;
+            context.textAlign = 'center';
+            context.textBaseline = 'middle';
+            let text = 'University of Tokaj';
+            let text_x = canvas_width / 2;
+            let text_y = font_size_px * 1.2;
+            context.fillText(text, text_x, text_y);
+
+            // Text line 2
+            text = 'Drone Technology Research Center';
+            text_x = canvas_width / 2;
+            text_y = canvas_height - font_size_px * 1.2;
+            context.fillText(text, text_x, text_y);
+        });
+    </script>
+
+</body>
+</html>
