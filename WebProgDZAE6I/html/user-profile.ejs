@@ -22,9 +22,9 @@
 
     <span>Gender:</span><br>
     <input type="radio" id="male" name="gender" value="male">
-    <span>Male</span><br>
+    <span>Male</span> | 
     <input type="radio" id="female" name="gender" value="female">
-    <span>Female</span><br>
+    <span>Female</span> | 
     <input type="radio" id="other" name="gender" value="other">
     <span>Other</span><br>
 
@@ -38,7 +38,43 @@
         <option value="wheat">
         <option value="egg">
         <option value="fish">
-    </datalist><br>
+    </datalist><br><br>
 
     <button type="submit">Update Profile</button>
 </form>
+<script>
+    $(document).ready(function() {
+        $("#birthday").datepicker({
+            dateFormat: 'yy-mm-dd'
+        });
+    });
+</script>
+<style>
+    input[type="text"],
+    input[type="color"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin-right: 5px;
+        margin-bottom: 15px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #ccc;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #ccc;
+        color: #333;
+    }
+</style>
