@@ -1,0 +1,76 @@
+<h1>Search for drones</h1>
+<form id="form_search">
+    <input type="text" id="keyword" name="keyword" />
+    <button type="submit">Search</button>
+</form>
+<div id="search_results"></div>
+
+<script>
+    $(document).ready(function() {
+        $('#form_search').submit(async function() {
+            event.preventDefault();
+            
+            try {
+                const response = await fetch(
+                    `/api/search-drones?keyword=${encodeURIComponent(document.getElementById('keyword').value)}`
+                );
+                const json_response = await response.json();
+                console.log(json_response);
+
+                $('#search_results').html('');
+
+                if (json_response.response.length == 0) {
+                    $('#search_results').html('<p>No result found...</p>');
+                }
+                else {
+                    json_response.response.forEach(result => {
+                        const search_result_div = document.createElement('div');
+                        search_result_div.className = 'search_result';
+                        search_result_div.textContent = `
+                            #${result.drone_id} - 
+                            ${result.country} - 
+                            ${result.company} - 
+                            ${result.platform}
+                        `;
+                        //$('#search_results').appendChild(search_result_div);
+                        document.getElementById('search_results').appendChild(search_result_div);
+                    });
+                }
+            }
+            catch (error) {
+                console.error('ERROR:', error);
+            }
+        });
+
+    });
+
+</script>
+<style>
+    #keyword, #form_search button {
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 5px;
+        width: 95%;
+        font-weight: bold;
+        font-size: 36px;
+    }
+    #form_search button {
+        background-color: #333;
+        color: #fff;
+        width: 100%;
+    }
+    #form_search button:hover {
+        background-color: #fff;
+        color: #333;
+    }
+    .search_result {
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 5px;
+        width: 95%;
+        font-weight: bold;
+        font-size: 18px;
+    }
+</style>

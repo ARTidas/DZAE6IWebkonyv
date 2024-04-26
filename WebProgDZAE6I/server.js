@@ -132,6 +132,34 @@ app.get('/api/count-users', async (req, res) => {
         res.status(500).json({ error: 'ERROR: Internal Server Error' });
     }
 });
+app.get('/api/search-drones', async (req, res) => {
+    try {
+        const client = await MongoClient.connect(mongodb_url, { useNewUrlParser: true, useUnifiedTopology: true });
+        const db = client.db('drones_database');
+        const collection = db.collection('drones_collection');
+
+        const { keyword } = req.query;
+        const regex = new RegExp(keyword, 'i');
+        console.log(`---Searching for keyword: ${keyword}`);
+
+        const response = await collection.find(
+            {
+                $or: [
+                    { platform: regex },
+                    { company: regex },
+                    { drone_id: regex },
+                    { country: regex },
+                ]
+            }
+        ).toArray();
+        res.json({response});
+
+        client.close();
+    } catch (error) {
+        console.error('Error searching drones:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
 
 // Setup the template model
@@ -210,6 +238,14 @@ app.get('/user/profile', (req, res) => {
     );
 });
 
+app.get('/drones/search', (req, res) => {
+    page_name = 'drones-search';
+    res.render(
+        'partials/frame', {
+            page_name: page_name
+        }
+    );
+});
 app.get('/drones/uavs', (req, res) => {
     page_name = 'drones-uavs';
     res.render(
