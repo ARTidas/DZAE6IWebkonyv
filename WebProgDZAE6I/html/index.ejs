@@ -16,7 +16,8 @@
     fetch('/api/count-drones')
         .then(response => response.json())
         .then(data => {
-            document.getElementById('drone_count').textContent = data.count;
+            //console.log(data);
+            document.getElementById('drone_count').textContent = data;
         })
         .catch(error => {
             console.error('Error fetching drone count:', error);
