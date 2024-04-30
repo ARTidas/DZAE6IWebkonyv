@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<VZ_orarend>
+
+    <event id="1" type="seminar">
+        <course_name>Webkönyvtárak</course_name>
+        <datetime>
+            <date>2024-02-12</date>
+            <time_start>13:00</time_start>
+            <time_end>15:00</time_end>
+        </datetime>
+        <address>Szemere I/A</address>
+        <presenter>Dr. Bednarik László</presenter>
+        <major>PTI</major>
+    </event>
+
+    <event id="2" type="seminar">
+        <course_name>Valószínűségszámítás és statisztika</course_name>
+        <datetime>
+            <date>2024-02-12</date>
+            <time_start>13:00</time_start>
+            <time_end>15:00</time_end>
+        </datetime>
+        <address>Szemere I/A</address>
+        <presenter>Dr. Bednarik László</presenter>
+        <major>PTI</major>
+    </event>
+
+    <event id="3" type="seminar">
+        <course_name>Számításelmélet</course_name>
+        <datetime>
+            <date>2024-02-12</date>
+            <time_start>13:00</time_start>
+            <time_end>15:00</time_end>
+        </datetime>
+        <address>Szemere I/A</address>
+        <presenter>Dr. Bednarik László</presenter>
+        <major>PTI</major>
+    </event>
+
+    <event id="4" type="seminar">
+        <course_name>Operációs rendszerek</course_name>
+        <datetime>
+            <date>2024-02-12</date>
+            <time_start>13:00</time_start>
+            <time_end>15:00</time_end>
+        </datetime>
+        <address>Szemere I/A</address>
+        <presenter>Dr. Bednarik László</presenter>
+        <major>PTI</major>
+    </event>
+
+</VZ_orarend>
