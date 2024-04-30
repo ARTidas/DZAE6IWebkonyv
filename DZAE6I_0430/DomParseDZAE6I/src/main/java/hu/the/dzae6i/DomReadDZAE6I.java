@@ -22,6 +22,7 @@ public class DomReadDZAE6I {
             xml_document.getDocumentElement().normalize();
 
             System.out.println("Root node: " + xml_document.getDocumentElement().getNodeName());
+            //System.out.println(); //TODO: Find the "event" nodes automatically, not with the getElementsByTagName function
 
             NodeList node_list = xml_document.getElementsByTagName("event");
             System.out.println("Found nodes: " + node_list.getLength());
@@ -31,8 +32,16 @@ public class DomReadDZAE6I {
                 
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
+                    
                     System.out.println("ID: " + element.getAttribute("id"));
                     System.out.println("Course name: " + element.getElementsByTagName("course_name").item(0).getTextContent());
+                    System.out.println("Presenter: " + element.getElementsByTagName("presenter").item(0).getTextContent());
+                    System.out.println("Major: " + element.getElementsByTagName("major").item(0).getTextContent());
+                    System.out.println("Address: " + element.getElementsByTagName("address").item(0).getTextContent());
+                    
+                    //element.get //TODO: Find the datetime of the event and print it
+                    
+                    System.out.println("");
                 }
             }
         }
