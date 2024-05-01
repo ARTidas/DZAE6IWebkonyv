@@ -1,51 +1,71 @@
-<h1>University of Tokaj</h1>
-<p>Also known as "Tokaj-Hegyalja Egyetem" (THE).</p>
+<section class="left">
+    <h1>University of Tokaj</h1>
+    <p>Also known as "Tokaj-Hegyalja Egyetem" (THE).</p>
 
-<h1>Drone Technology Research Center</h1>
+    <h1>Drone Technology Research Center</h1>
 
-<h2>Project documentation</h2>
-<p class="count">
-    <a href="https://docs.google.com/document/d/1fFHs7fawe3v_g4uKaI39KgA0OrZJkfSebWtU66uu2hw/edit?usp=sharing" target="_blanl">
-        Open documentation
-    </a>
-</p>
+    <h2>Project documentation</h2>
+    <p class="count">
+        <a href="https://docs.google.com/document/d/1fFHs7fawe3v_g4uKaI39KgA0OrZJkfSebWtU66uu2hw/edit?usp=sharing" target="_blanl">
+            Open documentation
+        </a>
+    </p>
 
-<h2>Number of drones in our laboratory</h2>
-<p id="drone_count" class="count">Loading...</p>
-<script>
-    fetch('/api/count-drones')
-        .then(response => response.json())
-        .then(data => {
-            //console.log(data);
-            document.getElementById('drone_count').textContent = data;
-        })
-        .catch(error => {
-            console.error('Error fetching count:', error);
-            document.getElementById('drone_count').textContent = 'Error fetching count';
+    <h2>Number of drones in our laboratory</h2>
+    <p id="drone_count" class="count">Loading...</p>
+    <script>
+        $(document).ready(function() {
+            fetch('/api/count-drones')
+                .then(response => response.json())
+                .then(data => {
+                    //console.log(data);
+                    document.getElementById('drone_count').textContent = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching count:', error);
+                    document.getElementById('drone_count').textContent = 'Error fetching count';
+                });
         });
-</script>
+    </script>
 
-<h2>Number of engineers in our team</h2>
-<p id="user_count" class="count">Loading...</p>
-<script>
-    fetch('/api/count-users')
-        .then(response => response.json())
-        .then(data => {
-            //console.log(data);
-            document.getElementById('user_count').textContent = data;
-        })
-        .catch(error => {
-            console.error('Error fetching count:', error);
-            document.getElementById('user_count').textContent = 'Error fetching count';
+    <h2>Number of engineers in our team</h2>
+    <p id="user_count" class="count">Loading...</p>
+    <script>
+        $(document).ready(function() {
+            fetch('/api/count-users')
+                .then(response => response.json())
+                .then(data => {
+                    //console.log(data);
+                    document.getElementById('user_count').textContent = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching count:', error);
+                    document.getElementById('user_count').textContent = 'Error fetching count';
+                });
         });
-</script>
+    </script>
+    <style>
+        .count {
+            border: 1px dashed #ccc;
+            padding: 10px;
+            background-color: #eee;
+            font-weight: bold;
+            font-size: 36px;
+        }
+        .left {
+            float: left;
+        }
+        .left, .right {
+            width: 47%;
+        }
+    </style>
+</section>
 
-<style>
-    .count {
-        border: 1px dashed #ccc;
-        padding: 10px;
-        background-color: #eee;
-        font-weight: bold;
-        font-size: 36px;
-    }
-</style>
+<section class="right">
+    <script>
+        $(document).ready(function() {
+
+        });
+    </script>
+</section>
+<br style="clear:both;" />
