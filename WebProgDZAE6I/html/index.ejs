@@ -47,7 +47,8 @@
 </section>
 
 <section class="right">
-    <div class="slideshow_container">
+    <div id="slideshow_container">
+        <div class="mask"></div>
         <img id="slideshow_img" src="">
     </div>
     <script>
@@ -55,6 +56,7 @@
             //console.log('Starting up engines...');
             var current_index = 0;
             var images = [
+                "logo_large.png",
                 "1-IMG_9515.JPG",
                 "325911924_2121405098250011_3585025570035537713_n.jpg",
                 "399710798_302764609331821_685907675419807536_n.jpg",
@@ -72,10 +74,24 @@
             function showImage(index) {
                 //$("#slideshow_img").attr("src", `/media/carousel/${images[index]}`);
                 //console.log('Showing image: ' + `/media/carousel/${images[index]}`);
-                $("#slideshow_img").fadeOut(300, function() {
-                    $(this).attr("src", `/media/carousel/${images[index]}`);
-                    $(this).fadeIn(300);
-                });
+                $("#slideshow_img").animate(
+                    {
+                        marginLeft: '100%',
+                        opacity: 0
+                    },
+                    300,
+                    function() {
+                        $(this).attr("src", `/media/carousel/${images[index]}`);
+                        $(this).css('marginLeft', '0%');
+                        $(this).animate(
+                            {
+                                marginLeft: '0px',
+                                opacity: 1
+                            },
+                            300
+                        );
+                    }
+                );
             }
 
             function nextImage() {
@@ -112,6 +128,7 @@
     }
     .left, .right {
         width: 50%;
+        overflow: hidden;
     }
     #slideshow_container {
         overflow: hidden;
@@ -124,6 +141,15 @@
         border-radius: 10px;
         border: 1px solid #eee;
         height: auto;
+    }
+    .mask {
+        position: absolute;
+        top: 126px;
+        right: 25%;
+        height: 60%;
+        width: 25%;
+        background: linear-gradient(to right, rgba(244, 244, 244, 1), rgba(255, 255, 255, 0)); /* White to transparent gradient */
+        z-index: 1;
     }
 </style>
 <br style="clear:both;" />
