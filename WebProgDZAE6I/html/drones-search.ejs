@@ -46,31 +46,26 @@
 
 </script>
 <style>
-    #keyword, #form_search button {
+    #keyword, #form_search button, .search_result {
         padding: 20px;
         border: 1px solid #ccc;
         background-color: #fff;
         border-radius: 5px;
-        width: 95%;
+        width: 100%;
         font-weight: bold;
         font-size: 36px;
+        box-sizing: border-box; /*https://stackoverflow.com/questions/46561503/html-input-and-button-not-same-width*/
     }
     #form_search button {
         background-color: #333;
         color: #fff;
-        width: 100%;
     }
     #form_search button:hover {
         background-color: #fff;
         color: #333;
     }
     .search_result {
-        padding: 20px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        border-radius: 5px;
-        width: 95%;
-        font-weight: bold;
         font-size: 18px;
+        font-weight: normal;
     }
 </style>
