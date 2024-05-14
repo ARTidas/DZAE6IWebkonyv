@@ -16,7 +16,7 @@ public class DomReadDZAE6I {
         try {
             //File xml_file = new File("DZAE6I_orarend.xml");
             //File xml_file = new File("C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\DZAE6I_orarend.xml");
-            File xml_file = new File("DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/DZAE6I_orarend.xml"); //Linux
+            File xml_file = new File("DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarendDZAE6I.xml"); //Linux
             DocumentBuilderFactory document_builder_factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder document_builder = document_builder_factory.newDocumentBuilder();
             org.w3c.dom.Document xml_document = document_builder.parse(xml_file);
