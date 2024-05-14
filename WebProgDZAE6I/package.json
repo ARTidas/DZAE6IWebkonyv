@@ -29,6 +29,7 @@
     "jquery": "^3.7.1",
     "jquery-ui-dist": "^1.13.2",
     "leaflet": "^1.9.4",
-    "mongodb": "^6.5.0"
+    "mongodb": "^6.5.0",
+    "node": "^20.13.0"
   }
 }
