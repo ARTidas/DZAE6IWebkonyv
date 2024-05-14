@@ -15,15 +15,15 @@ public class DomReadDZAE6I {
     public DomReadDZAE6I() throws SAXException, IOException, ParserConfigurationException {
         try {
             //File xml_file = new File("DZAE6I_orarend.xml");
-            File xml_file = new File("C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\DZAE6I_orarend.xml");
+            //File xml_file = new File("C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\DZAE6I_orarend.xml");
+            File xml_file = new File("DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/DZAE6I_orarend.xml"); //Linux
             DocumentBuilderFactory document_builder_factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder document_builder = document_builder_factory.newDocumentBuilder();
             org.w3c.dom.Document xml_document = document_builder.parse(xml_file);
             xml_document.getDocumentElement().normalize();
 
             System.out.println("Root node: " + xml_document.getDocumentElement().getNodeName());
-            //System.out.println(); //TODO: Find the "event" nodes automatically, not with the getElementsByTagName function
-
+            
             NodeList node_list = xml_document.getElementsByTagName("event");
             System.out.println("Found nodes: " + node_list.getLength());
 
@@ -34,6 +34,7 @@ public class DomReadDZAE6I {
                     Element element = (Element) node;
                     
                     System.out.println("ID: " + element.getAttribute("id"));
+                    System.out.println("Course type: " + element.getAttribute("type"));
                     System.out.println("Course name: " + element.getElementsByTagName("course_name").item(0).getTextContent());
                     System.out.println("Presenter: " + element.getElementsByTagName("presenter").item(0).getTextContent());
                     System.out.println("Major: " + element.getElementsByTagName("major").item(0).getTextContent());
@@ -50,9 +51,8 @@ public class DomReadDZAE6I {
         }
     }
     
-    // Classes main function is called from the packages main class
-    /*public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException {
+    public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException {
         DomReadDZAE6I dom_read = new DomReadDZAE6I();
-    }*/
+    }
     
 }
