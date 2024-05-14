@@ -20,7 +20,8 @@ public class DomWriteDZAE6I {
     
     public DomWriteDZAE6I() {
         try {
-            File xml_file = new File("C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\DZAE6I_orarend.xml");
+            //File xml_file = new File("C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\DZAE6I_orarend.xml");
+            File xml_file = new File("DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarendDZAE6I.xml");
             DocumentBuilderFactory document_builder_factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder document_builder = document_builder_factory.newDocumentBuilder();
             org.w3c.dom.Document xml_document = document_builder.parse(xml_file);
@@ -46,33 +47,35 @@ public class DomWriteDZAE6I {
                     Element element = (Element) node;
                     
                     //https://attacomsian.com/blog/java-read-write-xml
-                    Attr new_attribute = new_document.createAttribute("id");
-                    new_attribute.setValue(element.getAttribute("id"));
+                    Attr id_attribute = new_document.createAttribute("id");
+                    Attr type_attribute = new_document.createAttribute("id");
+                    id_attribute.setValue(element.getAttribute("id"));
+                    type_attribute.setValue(element.getAttribute("type"));
                     Element new_element = new_document.createElement("event");
-                    new_element.setAttributeNode(new_attribute);
+                    new_element.setAttributeNode(id_attribute);
+                    new_element.setAttributeNode(type_attribute);
                     new_root_element.appendChild(new_element);
                     
                     System.out.println("ID: " + element.getAttribute("id"));
+                    System.out.println("Course type: " + element.getAttribute("type"));
                     System.out.println("Course name: " + element.getElementsByTagName("course_name").item(0).getTextContent());
                     System.out.println("Presenter: " + element.getElementsByTagName("presenter").item(0).getTextContent());
                     System.out.println("Major: " + element.getElementsByTagName("major").item(0).getTextContent());
                     System.out.println("Address: " + element.getElementsByTagName("address").item(0).getTextContent());
                     
-                    System.out.println("DateTime: " + element.getElementsByTagName("datetime").item(0).getTextContent());
-                    
-                    //element.get //TODO: Find the datetime of the event and print it
-                    /*Element element_datetime = node.getElementsByTagName("datetime");
-                    System.out.println("DateTime date: " + element_datetime.getElementsByTagName("date").item(0).getTextContent());*/
-                    //NodeList datetime_node_list = node.getChildNodes();
+                    //System.out.println("DateTime: " + element.getElementsByTagName("datetime").item(0).getTextContent());
                     //https://stackoverflow.com/questions/8328002/java-reading-xml-with-many-nested-elements
-                    NodeList datetime_node_list = element.getElementsByTagName("datetime");
-                    for (int j = 0; j < datetime_node_list.getLength(); j++) {
-                        //Node datetime_node = datetime_node_list.item(j);
-                        Element datetime_element = (Element) datetime_node_list.item(j);
-                        
-                        System.out.println("DateTime date: " + datetime_element.getElementsByTagName("date").item(0).getTextContent());
-                        System.out.println("DateTime time_start: " + datetime_element.getElementsByTagName("time_start").item(0).getTextContent());
-                        System.out.println("DateTime time_end: " + datetime_element.getElementsByTagName("time_end").item(0).getTextContent());
+                    //System.out.println("DateTime: " + element.getElementsByTagName("datetime").item(0).getTextContent());
+                    NodeList datetime_list = element.getElementsByTagName("datetime");
+                    for (int j = 0; j < datetime_list.getLength(); j++) {
+                        Node datetime_node = datetime_list.item(j);
+
+                        if (datetime_node.getNodeType() == Node.ELEMENT_NODE) {
+                            Element datetime_element = (Element) datetime_node;
+                            System.out.println(datetime_element.getElementsByTagName("date").item(0).getTextContent());
+                            System.out.println(datetime_element.getElementsByTagName("time_start").item(0).getTextContent());
+                            System.out.println(datetime_element.getElementsByTagName("time_end").item(0).getTextContent());
+                        }
                     }
                     
                     System.out.println("");
@@ -81,7 +84,8 @@ public class DomWriteDZAE6I {
             
             //https://mkyong.com/java/how-to-create-xml-file-in-java-dom/
             FileOutputStream xml_output = new FileOutputStream(
-                "C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarend1_DZAE6I.xml"
+                //"C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarend1DZAE6I.xml" //Windows
+                "DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarend1DZAE6I.xml" //Linux
             );
             writeXml(
                 new_document, 
