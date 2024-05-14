@@ -40,7 +40,18 @@ public class DomReadDZAE6I {
                     System.out.println("Major: " + element.getElementsByTagName("major").item(0).getTextContent());
                     System.out.println("Address: " + element.getElementsByTagName("address").item(0).getTextContent());
                     
-                    //element.get //TODO: Find the datetime of the event and print it
+                    //System.out.println("DateTime: " + element.getElementsByTagName("datetime").item(0).getTextContent());
+                    NodeList datetime_list = element.getElementsByTagName("datetime");
+                    for (int j = 0; j < datetime_list.getLength(); j++) {
+                        Node datetime_node = datetime_list.item(j);
+
+                        if (datetime_node.getNodeType() == Node.ELEMENT_NODE) {
+                            Element datetime_element = (Element) datetime_node;
+                            System.out.println(datetime_element.getElementsByTagName("date").item(0).getTextContent());
+                            System.out.println(datetime_element.getElementsByTagName("time_start").item(0).getTextContent());
+                            System.out.println(datetime_element.getElementsByTagName("time_end").item(0).getTextContent());
+                        }
+                    }
                     
                     System.out.println("");
                 }
