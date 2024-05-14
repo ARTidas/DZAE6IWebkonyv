@@ -16,12 +16,12 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class DomWriteDZAE6I {
+public class DomWrite2DZAE6I {
     
-    public DomWriteDZAE6I() {
+    public DomWrite2DZAE6I() {
         try {
-            //File xml_file = new File("C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarendDZAE6I.xml"); //Windows
-            File xml_file = new File("DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarendDZAE6I.xml"); //Linux
+            //File xml_file = new File("C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarendDZAE6I_type_as_element.xml"); //Windows
+            File xml_file = new File("DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarendDZAE6I_type_as_element.xml"); //Linux
             DocumentBuilderFactory document_builder_factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder document_builder = document_builder_factory.newDocumentBuilder();
             org.w3c.dom.Document xml_document = document_builder.parse(xml_file);
@@ -50,14 +50,16 @@ public class DomWriteDZAE6I {
                     Attr id_attribute = new_document.createAttribute("id");
                     Attr type_attribute = new_document.createAttribute("type");
                     id_attribute.setValue(element.getAttribute("id"));
-                    type_attribute.setValue(element.getAttribute("type"));
+                    type_attribute.setValue(
+                        element.getElementsByTagName("course_type").item(0).getTextContent()
+                    );
                     Element new_event_element = new_document.createElement("event");
                     new_event_element.setAttributeNode(id_attribute);
                     new_event_element.setAttributeNode(type_attribute);
                     new_root_element.appendChild(new_event_element);
                     
                     System.out.println("ID: " + element.getAttribute("id"));
-                    System.out.println("Course type: " + element.getAttribute("type"));
+                    System.out.println("Course type: " + element.getElementsByTagName("course_type").item(0).getTextContent());
                     System.out.println("Course name: " + element.getElementsByTagName("course_name").item(0).getTextContent());
                     System.out.println("Presenter: " + element.getElementsByTagName("presenter").item(0).getTextContent());
                     System.out.println("Major: " + element.getElementsByTagName("major").item(0).getTextContent());
@@ -131,8 +133,8 @@ public class DomWriteDZAE6I {
             
             //https://mkyong.com/java/how-to-create-xml-file-in-java-dom/
             FileOutputStream xml_output = new FileOutputStream(
-                //"C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarend1DZAE6I.xml" //Windows
-                "DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarend1DZAE6I.xml" //Linux
+                //"C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarend1ZAE6I_type_as_element.xml" //Windows
+                "DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarend1ZAE6I_type_as_element.xml" //Linux
             );
             writeXml(
                 new_document, 

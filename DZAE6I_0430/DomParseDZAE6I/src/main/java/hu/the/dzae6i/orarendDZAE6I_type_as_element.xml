@@ -2,8 +2,9 @@
 
 <VZ_orarend>
 
-    <event id="1" type="seminar">
+    <event id="1">
         <course_name>Webkönyvtárak</course_name>
+        <course_type>seminar</course_type>
         <datetime>
             <date>2024-02-12</date>
             <time_start>12:30</time_start>
@@ -13,8 +14,9 @@
         <presenter>Dr. Bednarik László</presenter>
         <major>PTI</major>
     </event>
-    <event id="2" type="exercise">
+    <event id="2">
         <course_name>Webkönyvtárak</course_name>
+        <course_type>exercise</course_type>
         <datetime>
             <date>2024-02-12</date>
             <time_start>15:30</time_start>
@@ -25,8 +27,9 @@
         <major>PTI</major>
     </event>
 
-    <event id="3" type="seminar">
+    <event id="3">
         <course_name>Komputergrafika és képfeldolgozás</course_name>
+        <course_type>seminar</course_type>
         <datetime>
             <date>2024-02-12</date>
             <time_start>12:30</time_start>
@@ -36,8 +39,9 @@
         <presenter>Perlaki Attila</presenter>
         <major>PTI</major>
     </event>
-    <event id="4" type="exercise">
+    <event id="4">
         <course_name>Komputergrafika és képfeldolgozás</course_name>
+        <course_type>exercise</course_type>
         <datetime>
             <date>2024-02-12</date>
             <time_start>15:30</time_start>
@@ -48,8 +52,9 @@
         <major>PTI</major>
     </event>
 
-    <event id="5" type="seminar">
+    <event id="5">
         <course_name>Valószínűségszámítás és statisztika</course_name>
+        <course_type>seminar</course_type>
         <datetime>
             <date>2024-02-12</date>
             <time_start>13:00</time_start>
@@ -60,8 +65,9 @@
         <major>PTI</major>
     </event>
 
-    <event id="6" type="seminar">
+    <event id="6">
         <course_name>Számításelmélet</course_name>
+        <course_type>seminar</course_type>
         <datetime>
             <date>2024-02-12</date>
             <time_start>13:00</time_start>
@@ -72,8 +78,9 @@
         <major>PTI</major>
     </event>
 
-    <event id="7" type="seminar">
+    <event id="7">
         <course_name>Operációs rendszerek</course_name>
+        <course_type>seminar</course_type>
         <datetime>
             <date>2024-02-12</date>
             <time_start>13:00</time_start>
@@ -84,8 +91,9 @@
         <major>PTI</major>
     </event>
 
-    <event id="8" type="seminar">
+    <event id="8">
         <course_name>Kriptográfia</course_name>
+        <course_type>seminar</course_type>
         <datetime>
             <date>2024-02-12</date>
             <time_start>13:00</time_start>
@@ -96,8 +104,9 @@
         <major>PTI</major>
     </event>
 
-    <event id="9" type="seminar">
+    <event id="9">
         <course_name>Alkalmazások fejlesztése projekt labor II.</course_name>
+        <course_type>seminar</course_type>
         <datetime>
             <date>2024-02-12</date>
             <time_start>13:00</time_start>
@@ -108,8 +117,9 @@
         <major>PTI</major>
     </event>
 
-    <event id="10" type="seminar">
+    <event id="10">
         <course_name>Kalkulus</course_name>
+        <course_type>seminar</course_type>
         <datetime>
             <date>2024-02-12</date>
             <time_start>13:00</time_start>
