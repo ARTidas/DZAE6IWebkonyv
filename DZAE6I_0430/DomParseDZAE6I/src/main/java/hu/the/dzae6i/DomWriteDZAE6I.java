@@ -20,8 +20,8 @@ public class DomWriteDZAE6I {
     
     public DomWriteDZAE6I() {
         try {
-            //File xml_file = new File("C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\DZAE6I_orarend.xml");
-            File xml_file = new File("DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarendDZAE6I.xml");
+            //File xml_file = new File("C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarendDZAE6I.xml"); //Windows
+            File xml_file = new File("DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarendDZAE6I.xml"); //Linux
             DocumentBuilderFactory document_builder_factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder document_builder = document_builder_factory.newDocumentBuilder();
             org.w3c.dom.Document xml_document = document_builder.parse(xml_file);
@@ -48,13 +48,13 @@ public class DomWriteDZAE6I {
                     
                     //https://attacomsian.com/blog/java-read-write-xml
                     Attr id_attribute = new_document.createAttribute("id");
-                    Attr type_attribute = new_document.createAttribute("id");
+                    Attr type_attribute = new_document.createAttribute("type");
                     id_attribute.setValue(element.getAttribute("id"));
                     type_attribute.setValue(element.getAttribute("type"));
-                    Element new_element = new_document.createElement("event");
-                    new_element.setAttributeNode(id_attribute);
-                    new_element.setAttributeNode(type_attribute);
-                    new_root_element.appendChild(new_element);
+                    Element new_event_element = new_document.createElement("event");
+                    new_event_element.setAttributeNode(id_attribute);
+                    new_event_element.setAttributeNode(type_attribute);
+                    new_root_element.appendChild(new_event_element);
                     
                     System.out.println("ID: " + element.getAttribute("id"));
                     System.out.println("Course type: " + element.getAttribute("type"));
@@ -63,6 +63,13 @@ public class DomWriteDZAE6I {
                     System.out.println("Major: " + element.getElementsByTagName("major").item(0).getTextContent());
                     System.out.println("Address: " + element.getElementsByTagName("address").item(0).getTextContent());
                     
+                    // Course name
+                    Element new_course_name_element = new_document.createElement("course_name");
+                    new_event_element.appendChild(new_course_name_element);
+                    // Presenter
+                    Element new_presenter_element = new_document.createElement("presenter");
+                    new_event_element.appendChild(new_presenter_element);
+
                     //System.out.println("DateTime: " + element.getElementsByTagName("datetime").item(0).getTextContent());
                     //https://stackoverflow.com/questions/8328002/java-reading-xml-with-many-nested-elements
                     //System.out.println("DateTime: " + element.getElementsByTagName("datetime").item(0).getTextContent());
