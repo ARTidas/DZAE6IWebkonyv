@@ -65,10 +65,27 @@ public class DomWriteDZAE6I {
                     
                     // Course name
                     Element new_course_name_element = new_document.createElement("course_name");
+                    new_course_name_element.setTextContent(
+                        element.getElementsByTagName("course_name").item(0).getTextContent()
+                    );
                     new_event_element.appendChild(new_course_name_element);
+
                     // Presenter
                     Element new_presenter_element = new_document.createElement("presenter");
+                    new_presenter_element.setTextContent(
+                        element.getElementsByTagName("presenter").item(0).getTextContent()
+                    );
                     new_event_element.appendChild(new_presenter_element);
+
+                    // Major
+                    Element new_major_element = new_document.createElement("major");
+                    new_major_element.setTextContent(
+                        element.getElementsByTagName("major").item(0).getTextContent()
+                    );
+                    new_event_element.appendChild(new_major_element);
+
+                    // Datetime
+                    Element new_datetime_element = new_document.createElement("datetime");
 
                     //System.out.println("DateTime: " + element.getElementsByTagName("datetime").item(0).getTextContent());
                     //https://stackoverflow.com/questions/8328002/java-reading-xml-with-many-nested-elements
@@ -79,11 +96,34 @@ public class DomWriteDZAE6I {
 
                         if (datetime_node.getNodeType() == Node.ELEMENT_NODE) {
                             Element datetime_element = (Element) datetime_node;
-                            System.out.println(datetime_element.getElementsByTagName("date").item(0).getTextContent());
-                            System.out.println(datetime_element.getElementsByTagName("time_start").item(0).getTextContent());
-                            System.out.println(datetime_element.getElementsByTagName("time_end").item(0).getTextContent());
+                            System.out.println("Date: " + datetime_element.getElementsByTagName("date").item(0).getTextContent());
+                            System.out.println("Time start: " + datetime_element.getElementsByTagName("time_start").item(0).getTextContent());
+                            System.out.println("Time end: " + datetime_element.getElementsByTagName("time_end").item(0).getTextContent());
+
+                            // Date
+                            Element new_date_element = new_document.createElement("date");
+                            new_date_element.setTextContent(
+                                element.getElementsByTagName("date").item(0).getTextContent()
+                            );
+                            new_datetime_element.appendChild(new_date_element);
+
+                            // Time start
+                            Element new_time_start_element = new_document.createElement("time_start");
+                            new_time_start_element.setTextContent(
+                                element.getElementsByTagName("time_start").item(0).getTextContent()
+                            );
+                            new_datetime_element.appendChild(new_time_start_element);
+
+                            // Time end
+                            Element new_time_end_element = new_document.createElement("time_end");
+                            new_time_end_element.setTextContent(
+                                element.getElementsByTagName("time_end").item(0).getTextContent()
+                            );
+                            new_datetime_element.appendChild(new_time_end_element);
                         }
                     }
+
+                    new_event_element.appendChild(new_datetime_element);
                     
                     System.out.println("");
                 }
