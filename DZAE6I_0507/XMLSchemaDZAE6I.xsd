@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- https://www.liquid-technologies.com/online-xsd-validator -->
+<!-- 1:66	sample.xml	cvc-elt.1.a: Cannot find the declaration of element 'VZ_orarend'. -->
 <!-- https://www.w3schools.com/xml/schema_howto.asp -->
 
+<!-- targetNamespace="https://pti.unithe.hu/DZAE6I"
+xmlns="https://pti.unithe.hu/DZAE6I" -->
 <xs:schema 
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="https://pti.unithe.hu/DZAE6I"
-    xmlns="https://pti.unithe.hu/DZAE6I"
     elementFormDefault="qualified"
 >
 
@@ -16,12 +18,21 @@
         </xs:sequence>
     </xs:complexType>
 
+    <!-- <xs:element name="VZ_orarend">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="event" type="EventType" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element> -->
+
     <xs:complexType name="EventType">
         <xs:sequence>
             <xs:element name="course_name" type="xs:string"/>
+            <xs:element name="datetime" type="DatetimeType"/>
+            <xs:element name="address" type="xs:string"/>
             <xs:element name="presenter" type="xs:string"/>
             <xs:element name="major" type="xs:string"/>
-            <xs:element name="datetime" type="DatetimeType"/>
         </xs:sequence>
         <!-- https://www.w3schools.com/xml/schema_dtypes_numeric.asp -->
         <xs:attribute name="id" type="xs:unsignedInt" use="required"/>

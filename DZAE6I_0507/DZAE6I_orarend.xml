@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- XMLSchemaDZAE6I.xsd -->
 
+<!-- xsi:schemaLocation="https://pti.unithe.hu/DZAE6I XMLSchemaDZAE6I.xsd" -->
 <VZ_orarend
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="XMLSchemaDZAE6I.xsd">
+    xsi:noNamespaceSchemaLocation="XMLSchemaDZAE6I.xsd"
 >
 
     <event id="1" type="seminar">
