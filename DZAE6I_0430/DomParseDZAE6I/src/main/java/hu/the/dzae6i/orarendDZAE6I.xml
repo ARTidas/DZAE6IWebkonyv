@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- XMLSchemaDZAE6I.xsd -->
 
-<VZ_orarend>
+<!-- xsi:schemaLocation="https://pti.unithe.hu/DZAE6I XMLSchemaDZAE6I.xsd" -->
+<!-- https://learn.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms256139(v=vs.100) -->
+<VZ_orarend
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="XMLSchemaDZAE6I.xsd"
+>
 
     <event id="1" type="seminar">
         <course_name>Webkönyvtárak</course_name>
