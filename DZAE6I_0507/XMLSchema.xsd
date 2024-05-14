@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://www.w3schools.com/xml/schema_howto.asp -->
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://pti.unithe.hu/DZAE6I"
+    xmlns="https://pti.unithe.hu/DZAE6I"
+    elementFormDefault="qualified"
+>
+
+    <xs:element name="VZ_orarend" type="orarendType"/>
+
+    <xs:complexType name="orarendType">
+        <xs:sequence>
+            <xs:element name="event" type="EventType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EventType">
+        <xs:sequence>
+            <xs:element name="course_name" type="xs:string"/>
+            <xs:element name="presenter" type="xs:string"/>
+            <xs:element name="major" type="xs:string"/>
+            <xs:element name="datetime" type="DatetimeType"/>
+        </xs:sequence>
+        <!-- https://www.w3schools.com/xml/schema_dtypes_numeric.asp -->
+        <xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+        <xs:attribute name="type" type="EventTypeType"/>
+    </xs:complexType>
+
+    <xs:simpleType name="EventTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="seminar"/>
+            <xs:enumeration value="exercise"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="DatetimeType">
+        <xs:sequence>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="time_start" type="xs:string"/>
+            <xs:element name="time_end" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
