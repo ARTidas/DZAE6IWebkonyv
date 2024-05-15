@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <title>Exercise</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="description" content="Exercise" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" type="text/css" />
+    <script src="jquery-ui/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+</head>
+<body>
+
+    <section class="container">
+        <h1>JQuery - DZAE6I</h1>
+
+        <label>Name: </label><input id="name" type="text" />
+        <label>Email: </label><input id="email" type="text" />
+        <label>Password: </label><input id="password" type="text" />
+
+        <button id="id_button">Registration!</button>
+        <div id="dialog" style="display: none;">
+            <p id="dialog_message"></p>
+        </div>
+
+        <footer>
+            <p>Zoltan Veres - DZAE6I</p>
+        </footer>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            console.log("Starting up engines...");
+
+            $('.container input').css('background-color', '#fff');
+            $('.container input').css('border', '1px solid #fff');
+
+            $('.container input').hover(function () {
+                $(this).css('border', '1px solid #f00');
+            });
+
+            $('.container input').click(function () {
+                $(this).css('background-color', '#0f0');
+            });
+
+            //https://api.jqueryui.com/dialog/
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    Ok: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+            $('#id_button').click(function() {
+                let name = $('#name').val();
+                let email = $('#email').val();
+                let password = $('#password').val();
+
+                if (name == '' || email == '' || password == '') {
+                    //$('.container input').css('border-color', '#f00');
+                    $("#dialog_message").text("Please fill out the missing fields!");
+                    $("#dialog").dialog("option", "title", "Error");
+                    $("#dialog").dialog("open");
+                }
+                else {
+                    $("#dialog_message").text("Registration successfull!");
+                    $("#dialog").dialog("option", "title", "Success");
+                    $("#dialog").dialog("open");
+                }
+            });
+
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #ddd;
+        }
+        input[type="submit"] {
+            background-color: #888;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #666;
+        }
+
+        footer {
+            text-align: right;
+        }
+
+        span.warning {
+            background-color: #f00;
+            color: #ff0;
+        }
+    </style>
+</body>
+</html>
