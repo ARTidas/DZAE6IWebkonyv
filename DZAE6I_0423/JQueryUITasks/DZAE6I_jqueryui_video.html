@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <title>Exercise</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="description" content="Exercise" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" type="text/css" />
+    <script src="jquery-ui/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+</head>
+<body>
+
+    <h1>Video</h1>
+
+    <video id="myVideo" width="50%" controls>
+        <source src="DZAE6I_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <section>
+        <p>Playback control</p>
+        <div id="playback_control">
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="toggle_play">Play/Pause</button>
+        </div>
+    </section>
+    <section>
+        <p>Playback speed control</p>
+        <div id="speed_control">
+            <input type="radio" id="speed_050" name="speed" value="0.5">
+            <label for="speed_050">Very Slow</label>
+            <input type="radio" id="speed_075" name="speed" value="0.75">
+            <label for="speed_075">Slow</label>
+            <input type="radio" id="speed_100" name="speed" value="1.0" checked>
+            <label for="speed_100">Normal</label>
+            <input type="radio" id="speed_150" name="speed" value="1.5">
+            <label for="speed_150">Fast</label>
+            <input type="radio" id="speed_200" name="speed" value="2.0">
+            <label for="speed_200">Very Fast</label>
+        </div>
+    </section>
+    <section>
+        <p>Sound control</p>
+        <div id="sound_control">
+            <button id="toggle_mute">Mute/Unmute</button>
+            <br/>
+            <br/>
+            <div id="volume_slider"></div>
+        </div>
+    </section>
+    <section>
+        <p>Data control</p>
+        <div id="data_control">
+            <button id="video_length">Length of Video</button>
+            <button id="current_time">Current Position</button>
+            <button id="video_ended">Is Video Ended?</button>
+        </div>
+    </section>
+    <br/>
+
+    <script>
+        $(document).ready(function() {
+            console.log('Starting up engines...');
+            let video = $("#myVideo")[0];
+
+            // https://api.jqueryui.com/buttonset/
+            $("#playback_control").buttonset();
+
+            // https://api.jqueryui.com/buttonset/ // With Label
+            $("#speed_control").buttonset();
+
+            $("#sound_control").buttonset();
+
+            $("#data_control").buttonset();
+
+            // https://api.jqueryui.com/slider/
+            $("#volume_slider").slider({
+                min: 0,
+                max: 100,
+                slide: function(event, ui) {
+                    video.volume = ui.value / 100;
+                }
+            });
+
+            // TODO: If time allows it, maybe implement a seeker as well
+            // https://stackoverflow.com/questions/37501717/using-jqueryui-as-an-audio-seek-control-and-rebinding-a-new-slider-to-the-same
+
+            $("#play").click(function() {
+                video.play();
+            });
+
+            $("#pause").click(function() {
+                video.pause();
+            });
+
+            $("#toggle_play").click(function() {
+                if (video.paused)
+                    video.play();
+                else
+                    video.pause();
+            });
+
+            $("#toggle_mute").click(function() {
+                video.muted = !video.muted;
+                // TODO: Slider also requires adjustment after this event trigger!
+            });
+
+            $("input[name='speed']").change(function() {
+                video.playbackRate = parseFloat($(this).val());
+            });
+
+            $("#video_length").click(function() {
+                alert("Length of Video: " + video.duration + " seconds");
+            });
+
+            $("#current_time").click(function() {
+                alert("Current Position: " + video.currentTime + " seconds");
+            });
+
+            $("#video_ended").click(function() {
+                alert("Is Video Ended? " + video.ended);
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        select,
+        input[type="number"],
+        input[type="range"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #ddd;
+        }
+        input[type="submit"] {
+            background-color: #888;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #666;
+        }
+        footer {
+            text-align: right;
+        }
+        span.warning {
+            background-color: #f00;
+            color: #ff0;
+        }
+    </style>
+
+</body>
+</html>
