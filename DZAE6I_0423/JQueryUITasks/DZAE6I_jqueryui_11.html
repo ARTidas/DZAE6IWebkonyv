@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" type="text/css" />
     <script src="jquery-ui/jquery.js"></script>
     <script src="jquery-ui/jquery-ui.min.js"></script>
-
-    <script src="DZAE6I_jqueryui_11.js"></script>
     <style>
         li strong {
             text-transform: capitalize;
@@ -25,37 +23,62 @@
 </head>
 <body>
 
-    <h1>JQuery task - DZAE6I</h1>
+    <h1>JQuery + Jquery UI task - DZAE6I</h1>
 
     <p><strong>Please provide two integer numbers!</strong></p>
 
-    <span><strong>A=</strong></span>
-    <input value="10" id="input_a"/>
-    <br>
-    <span><strong>B=</strong></span>
-    <input value="2" id="input_b"/>
-    <br>
+    <div style="width:50%;">
 
-    <input type="radio" name="operation" value="multiplication" checked />
-    <span>A*B</span>
-    <br>
-    <input type="radio" name="operation" value="division" />
-    <span>A/B</span>
-    <br>
-    <input type="radio" name="operation" value="addition" />
-    <span>A+B</span>
-    <br>
-    <input type="radio" name="operation" value="subtraction" />
-    <spna>A-B</spna>
-    <br>
+        <span><strong>A=</strong></span>
+        <input value="10" id="input_a"/>
+        <div id="slider_a"></div>
+        <br>
+        <span><strong>B=</strong></span>
+        <input value="2" id="input_b"/>
+        <div id="slider_b"></div>
+        <br>
 
-    <button id="compute">Compute</button>
-    <span><strong>Result:</strong></span>
-    <span id="result"></span>
+        <input type="radio" name="operation" value="multiplication" checked />
+        <span>A*B</span>
+        <br>
+        <input type="radio" name="operation" value="division" />
+        <span>A/B</span>
+        <br>
+        <input type="radio" name="operation" value="addition" />
+        <span>A+B</span>
+        <br>
+        <input type="radio" name="operation" value="subtraction" />
+        <spna>A-B</spna>
+        <br>
+
+        <button id="compute">Compute</button>
+        <span><strong>Result:</strong></span>
+        <span id="result"></span>
+
+    </div>
 
     <script>
         $(document).ready(function() {
             console.log('Starting up engines...');
+
+            //https://jqueryui.com/slider/
+            //https://api.jqueryui.com/slider/
+            $("#slider_a").slider({
+                min: -100,
+                max: 100,
+                value: 10,
+                slide: function(event, ui) {
+                    $("#input_a").val(ui.value);
+                }
+            });
+            $("#slider_b").slider({
+                min: -100,
+                max: 100,
+                value: 2,
+                slide: function(event, ui) {
+                    $("#input_b").val(ui.value);
+                }
+            });
 
             $('#compute').click(function() {
                 console.log('Computing result...');
