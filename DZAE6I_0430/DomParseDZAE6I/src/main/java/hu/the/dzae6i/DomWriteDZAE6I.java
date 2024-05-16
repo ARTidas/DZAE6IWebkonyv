@@ -29,8 +29,17 @@ public class DomWriteDZAE6I {
             
             // New XML document
             Document new_document = document_builder.newDocument();
-            
-            System.out.println("Root node: " + xml_document.getDocumentElement().getNodeName());
+
+            // Console print - XML doctype
+            System.out.println("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>");
+
+            // Console print - Root node opening tag
+            System.out.println(
+                "   <" + 
+                xml_document.getDocumentElement().getNodeName() + 
+                " xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"XMLSchemaDZAE6I.xsd\">"
+            );
+
             //https://mkyong.com/java/how-to-create-xml-file-in-java-dom/
             Element new_root_element = new_document.createElement(
                 xml_document.getDocumentElement().getNodeName()
@@ -38,8 +47,6 @@ public class DomWriteDZAE6I {
             new_document.appendChild(new_root_element);
             
             NodeList node_list = xml_document.getElementsByTagName("event");
-            System.out.println("Found nodes: " + node_list.getLength());
-            
             for (int i = 0; i < node_list.getLength(); i++) {
                 Node node = node_list.item(i);
                 
@@ -55,13 +62,22 @@ public class DomWriteDZAE6I {
                     new_event_element.setAttributeNode(id_attribute);
                     new_event_element.setAttributeNode(type_attribute);
                     new_root_element.appendChild(new_event_element);
-                    
-                    System.out.println("ID: " + element.getAttribute("id"));
-                    System.out.println("Course type: " + element.getAttribute("type"));
-                    System.out.println("Course name: " + element.getElementsByTagName("course_name").item(0).getTextContent());
-                    System.out.println("Presenter: " + element.getElementsByTagName("presenter").item(0).getTextContent());
-                    System.out.println("Major: " + element.getElementsByTagName("major").item(0).getTextContent());
-                    System.out.println("Address: " + element.getElementsByTagName("address").item(0).getTextContent());
+
+                    // Console print - event node open tag with attributes
+                    System.out.println("        <event id=\"" + element.getAttribute("id") + "\" type=\"" + element.getAttribute("type") + "\">");
+
+                    // Console print - course name element
+                    System.out.println("            <course_name>" + element.getElementsByTagName("course_name").item(0).getTextContent() + "</course_name>");
+
+                    // Console print - presenter element
+                    System.out.println("            <presenter>" + element.getElementsByTagName("presenter").item(0).getTextContent() + "</presenter>");
+
+                    // Console print - major element
+                    System.out.println("            <major>" + element.getElementsByTagName("major").item(0).getTextContent() + "</major>");
+
+                    // Console print - address element
+                    System.out.println("            <address>" + element.getElementsByTagName("address").item(0).getTextContent() + "</address>");
+
                     
                     // Course name
                     Element new_course_name_element = new_document.createElement("course_name");
@@ -87,6 +103,8 @@ public class DomWriteDZAE6I {
                     // Datetime
                     Element new_datetime_element = new_document.createElement("datetime");
 
+                    // Console print - datetime element open tag
+                    System.out.println("            <datetime>");
                     //System.out.println("DateTime: " + element.getElementsByTagName("datetime").item(0).getTextContent());
                     //https://stackoverflow.com/questions/8328002/java-reading-xml-with-many-nested-elements
                     //System.out.println("DateTime: " + element.getElementsByTagName("datetime").item(0).getTextContent());
@@ -96,10 +114,16 @@ public class DomWriteDZAE6I {
 
                         if (datetime_node.getNodeType() == Node.ELEMENT_NODE) {
                             Element datetime_element = (Element) datetime_node;
-                            System.out.println("Date: " + datetime_element.getElementsByTagName("date").item(0).getTextContent());
-                            System.out.println("Time start: " + datetime_element.getElementsByTagName("time_start").item(0).getTextContent());
-                            System.out.println("Time end: " + datetime_element.getElementsByTagName("time_end").item(0).getTextContent());
 
+                            // Console print - date element
+                            System.out.println("                <date>" + datetime_element.getElementsByTagName("date").item(0).getTextContent() + "</date>");
+
+                            // Console print - time_start element
+                            System.out.println("                <time_start>" + datetime_element.getElementsByTagName("time_start").item(0).getTextContent() + "</time_start>");
+
+                            // Console print - date element
+                            System.out.println("                <date>" + datetime_element.getElementsByTagName("date").item(0).getTextContent() + "</date>");
+                            
                             // Date
                             Element new_date_element = new_document.createElement("date");
                             new_date_element.setTextContent(
@@ -122,12 +146,20 @@ public class DomWriteDZAE6I {
                             new_datetime_element.appendChild(new_time_end_element);
                         }
                     }
+                    // Console print - datetime element closing tag
+                    System.out.println("            </datetime>");
 
                     new_event_element.appendChild(new_datetime_element);
+
+                    // Console print - event node close tag
+                    System.out.println("        </event>");
                     
                     System.out.println("");
                 }
             }
+
+            // Console print - Root node closing tag
+            System.out.println("   </" + xml_document.getDocumentElement().getNodeName() + ">");
             
             FileOutputStream xml_output = new FileOutputStream(
                 "DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarend1DZAE6I.xml" //Windows
