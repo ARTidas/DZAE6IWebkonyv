@@ -18,351 +18,146 @@
     },
 
     "VZ_orarend": {
-        "class": [
+        "events": [
             {
-                "subject_name": "Valószínűségszámítás és statisztika",
+                "id": 1,
+                "type": "seminar",
+                "course_name": "Webkönyvtárak",
+                "datetime": {
+                    "date": "Tuesday",
+                    "time_start": "12:30",
+                    "time_end": "14:30"
+                },
+                "address": "Szemere I/A",
+                "presenter": "Dr. Bednarik László",
+                "major": "PTI"
+            },
+            {
+                "id": 2,
+                "type": "exercise",
+                "course_name": "Webkönyvtárak",
+                "datetime": {
+                    "date": "Tuesday",
+                    "time_start": "15:30",
+                    "time_end": "17:00"
+                },
+                "address": "Szemere I/A",
+                "presenter": "Dr. Bednarik László",
+                "major": "PTI"
+            },
+
+            {
+                "id": 3,
+                "type": "seminar",
+                "course_name": "Komputergrafika és képfeldolgozás",
+                "datetime": {
+                    "date": "Thursday",
+                    "time_start": "12:30",
+                    "time_end": "14:30"
+                },
+                "address": "Szemere I/A",
+                "presenter": "Dr. Bednarik László",
+                "major": "PTI"
+            },
+            {
+                "id": 4,
+                "type": "exercise",
+                "course_name": "Komputergrafika és képfeldolgozás",
+                "datetime": {
+                    "date": "Thursday",
+                    "time_start": "15:30",
+                    "time_end": "17:00"
+                },
+                "address": "Szemere I/A",
+                "presenter": "Dr. Bednarik László",
+                "major": "PTI"
+            },
+
+            {
+                "id": 5,
+                "type": "seminar",
+                "course_name": "Valószínűségszámítás és statisztika",
+                "datetime": {
+                    "date": "Monday",
+                    "time_start": "13:00",
+                    "time_end": "15:00"
+                },
+                "address": "Szemere I/A",
                 "presenter": "Dr. Földvári Attila József",
-                "major": "PTI",
-                "events": {
-                    "event": [
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        },
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        }
-                    ]
-                }
+                "major": "PTI"
             },
+
             {
-                "subject_name": "Webkönyvtárak",
-                "presenter": "Dr. Bednarik László",
-                "major": "PTI",
-                "events": {
-                    "event": [
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        },
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        }
-                    ]
-                }
+                "id": 6,
+                "type": "seminar",
+                "course_name": "Számításelmélet",
+                "datetime": {
+                    "date": "N/A",
+                    "time_start": "N/A",
+                    "time_end": "N/A"
+                },
+                "address": "Szemere I/A",
+                "presenter": "N/A",
+                "major": "PTI"
             },
+
             {
-                "subject_name": "Számításelmélet",
-                "presenter": "...",
-                "major": "PTI",
-                "events": {
-                    "event": [
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        },
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "subject_name": "Operációs rendszerek",
+                "id": 7,
+                "type": "seminar",
+                "course_name": "Operációs rendszerek",
+                "datetime": {
+                    "date": "Saturday",
+                    "time_start": "13:00",
+                    "time_end": "15:00"
+                },
+                "address": "Szemere I/A",
                 "presenter": "Janics Tamás",
-                "major": "PTI",
-                "events": {
-                    "event": [
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        },
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        }
-                    ]
-                }
+                "major": "PTI"
             },
+
             {
-                "subject_name": "Kriptográfia",
-                "presenter": "...",
-                "major": "PTI",
-                "events": {
-                    "event": [
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        },
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        }
-                    ]
-                }
+                "id": 8,
+                "type": "seminar",
+                "course_name": "Kriptográfia",
+                "datetime": {
+                    "date": "N/A",
+                    "time_start": "N/A",
+                    "time_end": "N/A"
+                },
+                "address": "Szemere I/A",
+                "presenter": "Dr. Nagy György",
+                "major": "PTI"
             },
+
             {
-                "subject_name": "Alkalmazások fejlesztése projekt labor II.",
+                "id": 9,
+                "type": "seminar",
+                "course_name": "Alkalmazások fejlesztése projekt labor II.",
+                "datetime": {
+                    "date": "Wednesday",
+                    "time_start": "13:00",
+                    "time_end": "15:00"
+                },
+                "address": "Szemere I/A",
                 "presenter": "Perlaki Attila",
-                "major": "PTI",
-                "events": {
-                    "event": [
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        },
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        }
-                    ]
-                }
+                "major": "PTI"
             },
+
             {
-                "subject_name": "Komputergrafika és képfeldolgozás",
-                "presenter": "Dr. Bednarik László",
-                "major": "PTI",
-                "events": {
-                    "event": [
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        },
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "subject_name": "Kalkulus",
-                "presenter": "Wiersumné Dr. Gyöngyösi Erika",
-                "major": "PTI",
-                "events": {
-                    "event": [
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-12",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        },
-                        {
-                            "start_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "12:00"
-                            },
-                            "end_datetime": {
-                                "week_type": "OddEven",
-                                "date": "2024-02-19",
-                                "time": "15:25"
-                            },
-                            "address": {
-                                "city": "Sárospatak",
-                                "street": "Szemere utca",
-                                "room": "Teológia I/A"
-                            }
-                        }
-                    ]
-                }
+                "id": 10,
+                "type": "seminar",
+                "course_name": "Kalkulus",
+                "datetime": {
+                    "date": "Monday",
+                    "time_start": "13:00",
+                    "time_end": "15:00"
+                },
+                "address": "Szemere I/A",
+                "presenter": "Perlaki Attila",
+                "major": "PTI"
             }
+
         ]
     }
+
 }
