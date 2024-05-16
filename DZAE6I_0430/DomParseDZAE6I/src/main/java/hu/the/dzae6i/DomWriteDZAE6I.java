@@ -20,8 +20,8 @@ public class DomWriteDZAE6I {
     
     public DomWriteDZAE6I() {
         try {
-            //File xml_file = new File("C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarendDZAE6I.xml"); //Windows
-            File xml_file = new File("DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarendDZAE6I.xml"); //Linux
+            File xml_file = new File("DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarendDZAE6I.xml"); //Windows
+            //File xml_file = new File("DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarendDZAE6I.xml"); //Linux
             DocumentBuilderFactory document_builder_factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder document_builder = document_builder_factory.newDocumentBuilder();
             org.w3c.dom.Document xml_document = document_builder.parse(xml_file);
@@ -129,13 +129,12 @@ public class DomWriteDZAE6I {
                 }
             }
             
-            //https://mkyong.com/java/how-to-create-xml-file-in-java-dom/
             FileOutputStream xml_output = new FileOutputStream(
-                //"C:\\VZGit\\DZAE6IWebkonyv\\DZAE6I_0430\\DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarend1DZAE6I.xml" //Windows
-                "DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarend1DZAE6I.xml" //Linux
+                "DomParseDZAE6I\\src\\main\\java\\hu\\the\\dzae6i\\orarend1DZAE6I.xml" //Windows
+                //"DZAE6I_0430/DomParseDZAE6I/src/main/java/hu/the/dzae6i/orarend1DZAE6I.xml" //Linux
             );
             writeXml(
-                new_document, 
+                xml_document, //new_document, 
                 xml_output
             );
         }
@@ -154,7 +153,10 @@ public class DomWriteDZAE6I {
         StreamResult result = new StreamResult(output);
 
         transformer.transform(source, result);
+    }
 
+    public static void main(String[] args) {
+        DomWriteDZAE6I dom_write = new DomWriteDZAE6I();
     }
     
 }
